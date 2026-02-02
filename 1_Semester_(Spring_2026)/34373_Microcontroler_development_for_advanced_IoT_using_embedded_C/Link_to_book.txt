@@ -1,0 +1,2 @@
+Link to the book:
+https://learning-oreilly-com.proxy.findit.cvt.dk/library/view/programming-with-stm32/9781260031324/cover.xhtml
