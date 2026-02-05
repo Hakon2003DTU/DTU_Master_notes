@@ -1,0 +1,26 @@
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+use std.textio.all
+
+
+-- This is a test 
+
+Entity This_is_a_test is 
+
+--defining ports
+Port (SW  : in  std_logic_vector(9 downto 0);
+		LED : out std_logic_vector(9 downto 0)
+		);
+		
+End part1;
+
+Architecture Behavior of This_is_a_test is 
+Begin
+--defining behavior of the part
+LED<=SW;
+End Behavior;
+
