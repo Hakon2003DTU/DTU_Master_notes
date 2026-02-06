@@ -6,3 +6,6 @@ This repository was created by Hákon Hlynsson and Jonas Rose Lund Pedersen. It 
 * 34349: FPGA Design for Communication Systems
 * 34373: Microcontroller Development for Advanced IoT using Embedded C
 * 34655: Integrated Analog Electronics 2
+# Second Semester Courses
+# Third Semester Courses
+# Fourth Semester Courses
