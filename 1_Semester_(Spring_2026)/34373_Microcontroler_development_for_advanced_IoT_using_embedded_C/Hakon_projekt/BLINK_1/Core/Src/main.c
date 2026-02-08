@@ -84,7 +84,6 @@ int main(void)
 		  HAL_Delay(100);												//Delay 100ms
 		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_RESET);		//Set LED
 	  	  HAL_Delay(100);												//Delay 100ms
-
 	  }
 	  HAL_Delay(1000);
 	  X++;
