@@ -1,0 +1,30 @@
+# Compile of tcounter.vhd was successful.
+vsim work.test_counter
+# vsim work.test_counter 
+# Start time: 14:53:18 on Feb 11,2026
+# Loading std.standard
+# Loading work.test_counter(only)
+# ** Warning: (vsim-3473) Component instance "dut : counter" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /test_counter File: C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/testbench/tcounter.vhd
+vsim 3473
+# End time: 14:55:25 on Feb 11,2026, Elapsed time: 0:02:07
+# Errors: 0, Warnings: 6
+# vsim 3473 
+# Start time: 14:55:25 on Feb 11,2026
+# ** Error: (vsim-3170) Could not find '3473'.
+#         Searched libraries:
+#             C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/testbench/work
+# Error loading design
+# End time: 14:55:25 on Feb 11,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+quit -sim
+vsim work.test_counter -L C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/parts_lib
+# vsim work.test_counter -L C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/parts_lib 
+# Start time: 15:00:09 on Feb 11,2026
+# Loading std.standard
+# Loading work.test_counter(only)
+# Loading C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/parts_lib.counter(only)
+add wave -position end sim:/test_counter/*
+run
+# End time: 13:25:09 on Feb 14,2026, Elapsed time: 70:25:00
+# Errors: 0, Warnings: 2

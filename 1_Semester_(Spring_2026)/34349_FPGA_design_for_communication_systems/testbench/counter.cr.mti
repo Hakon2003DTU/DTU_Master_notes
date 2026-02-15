@@ -1,0 +1,7 @@
+C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/testbench/tcounter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/testbench/tcounter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity test_counter
+-- Compiling architecture only of test_counter
+
+} {} {}}

@@ -1,0 +1,85 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture
+Ecounter
+Z1 w1582886313
+!i122 5
+R0
+Z2 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/counter.vhd
+Z3 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/counter.vhd
+l0
+Z4 L10 1
+VeP_DScYblKJoGj47:A>3H2
+!s100 [3YB00WOScZ[1n5QzB5>K2
+Z5 OV;C;2020.1;71
+32
+Z6 !s110 1770816169
+!i10b 1
+Z7 !s108 1770816169.000000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/counter.vhd|
+Z9 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/counter.vhd|
+!i113 1
+Z10 o-work work -2002 -explicit
+Z11 tExplicit 1 CvgOpt 0
+Aonly
+Z12 DEx4 work 7 counter 0 22 eP_DScYblKJoGj47:A>3H2
+!i122 5
+l34
+Z13 L16 33
+Z14 V;SFO85MG`m>LTnc6^?1631
+Z15 !s100 ^Tk8L<z6nzL>X;n;9<^FD1
+R5
+32
+R6
+!i10b 1
+R7
+R8
+R9
+!i113 1
+R10
+R11
+Etest_counter
+R1
+!i122 4
+R0
+Z16 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/tcounter.vhd
+Z17 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/tcounter.vhd
+l0
+R4
+V5O?C:1R`X^K5XC5aS=C:83
+!s100 4H1USZMHB7cgmkGOZ:ClI0
+R5
+32
+R6
+!i10b 1
+R7
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/tcounter.vhd|
+Z19 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture/tcounter.vhd|
+!i113 1
+R10
+R11
+Aonly
+DEx4 work 12 test_counter 0 22 5O?C:1R`X^K5XC5aS=C:83
+!i122 4
+l25
+L14 32
+V8H]:M?TSD9biWP0i:E_fk3
+!s100 GWn18Y`M^WdDSBha21A9n3
+R5
+32
+R6
+!i10b 1
+R7
+R18
+R19
+!i113 1
+R10
+R11

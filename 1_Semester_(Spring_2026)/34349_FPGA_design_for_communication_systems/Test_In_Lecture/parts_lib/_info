@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test_In_Lecture
+Ecounter
+Z1 w1582886313
+!i122 0
+R0
+Z2 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/resource_library/counter.vhd
+Z3 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/resource_library/counter.vhd
+l0
+L10 1
+V2Lm8H0^emF77NBZRi`?nM3
+!s100 [3YB00WOScZ[1n5QzB5>K2
+Z4 OV;C;2020.1;71
+32
+Z5 !s110 1770817266
+!i10b 1
+Z6 !s108 1770817266.000000
+Z7 !s90 -reportprogress|300|-work|parts_lib|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/resource_library/counter.vhd|
+!s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/resource_library/counter.vhd|
+!i113 1
+Z8 o-work parts_lib
+Z9 tExplicit 1 CvgOpt 0
+Aonly
+DEx4 work 7 counter 0 22 2Lm8H0^emF77NBZRi`?nM3
+!i122 0
+l34
+L16 33
+VR:DFjmm4C]4^Uk<Jd2:_D2
+!s100 ^Tk8L<z6nzL>X;n;9<^FD1
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z10 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/resource_library/counter.vhd|
+!i113 1
+R8
+R9

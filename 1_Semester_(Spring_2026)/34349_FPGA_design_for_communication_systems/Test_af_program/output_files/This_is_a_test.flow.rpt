@@ -1,5 +1,5 @@
 Flow report for This_is_a_test
-Thu Feb 05 15:05:11 2026
+Wed Feb 11 10:17:08 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Feb 05 15:05:11 2026       ;
+; Flow Status                        ; Successful - Wed Feb 11 10:17:08 2026       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; This_is_a_test                              ;
 ; Top-level Entity Name              ; This_is_a_test                              ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/05/2026 15:05:03 ;
+; Start date & time ; 02/11/2026 10:16:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; This_is_a_test      ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 141208173757905.177030030329144        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 187172362217663.177080141344076        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -97,8 +97,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4790 MB             ; 00:00:19                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4791 MB             ; 00:00:30                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

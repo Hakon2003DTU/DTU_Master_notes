@@ -64,7 +64,6 @@ static void MX_NVIC_Init(void);
   */
 
 uint16_t tDelay= 250;
-
 int main(void)
 {
 
