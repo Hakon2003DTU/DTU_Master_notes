@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00019649  00000000  00000000  00008344  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00005aaf  00000000  00000000  0002198d  2**0
+ 17 .debug_line   00005aab  00000000  00000000  0002198d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000939ab  00000000  00000000  0002743c  2**0
+ 18 .debug_str    000939ab  00000000  00000000  00027438  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000bade7  2**0
+ 19 .comment      00000043  00000000  00000000  000bade3  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000d68  00000000  00000000  000bae2c  2**2
+ 20 .debug_frame  00000d68  00000000  00000000  000bae28  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 000000d7  00000000  00000000  000bbb94  2**0
+ 21 .debug_line_str 000000d7  00000000  00000000  000bbb90  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -88,7 +88,6 @@ void MX_GPIO_Init(void)
  80001c8:	b580      	push	{r7, lr}
  80001ca:	b088      	sub	sp, #32
  80001cc:	af00      	add	r7, sp, #0
-
   GPIO_InitTypeDef GPIO_InitStruct = {0};
  80001ce:	f107 030c 	add.w	r3, r7, #12
  80001d2:	2200      	movs	r2, #0
@@ -174,7 +173,6 @@ void MX_GPIO_Init(void)
  8000264:	4619      	mov	r1, r3
  8000266:	4804      	ldr	r0, [pc, #16]	@ (8000278 <MX_GPIO_Init+0xb0>)
  8000268:	f000 fa8e 	bl	8000788 <HAL_GPIO_Init>
-
 }
  800026c:	bf00      	nop
  800026e:	3720      	adds	r7, #32
@@ -600,15 +598,9 @@ void EXTI15_10_IRQHandler(void)
 {
  800040e:	b580      	push	{r7, lr}
  8000410:	af00      	add	r7, sp, #0
-  /* USER CODE BEGIN EXTI15_10_IRQn 0 */
-
-  /* USER CODE END EXTI15_10_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(BUT1_Pin);
  8000412:	f44f 5000 	mov.w	r0, #8192	@ 0x2000
  8000416:	f000 fb5b 	bl	8000ad0 <HAL_GPIO_EXTI_IRQHandler>
-  /* USER CODE BEGIN EXTI15_10_IRQn 1 */
-
-  /* USER CODE END EXTI15_10_IRQn 1 */
 }
  800041a:	bf00      	nop
  800041c:	bd80      	pop	{r7, pc}
