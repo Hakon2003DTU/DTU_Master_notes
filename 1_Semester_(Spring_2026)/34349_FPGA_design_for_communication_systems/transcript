@@ -412,3 +412,8 @@ add wave -position end sim:/fcs_check_serial_tb/*
 run
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /fcs_check_serial_tb/Comp1
+quit -sim
+# End time: 12:09:55 on Feb 19,2026, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 3
+dataset reload -f
+# Dataset not found: 
