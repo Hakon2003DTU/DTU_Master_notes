@@ -75,7 +75,6 @@ begin
       end if;
       wait for clk_period;
     end loop;
-
     Test_data_in <= '0';
 
     wait;

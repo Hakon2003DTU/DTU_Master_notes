@@ -65,7 +65,7 @@ begin
         Test_start_of_frame <= '0';
       end if;
 
-      data_in <= Ethernet_packet(i);
+      Test_data_in <= Ethernet_packet(i);
 
       -- goes high when 32 bits remain(FCS)
       if i = 31 then
