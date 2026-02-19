@@ -1,0 +1,238 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/testbench
+Efcs_check_serial
+Z0 w1771498539
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 112
+Z4 dC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems
+Z5 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd
+Z6 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd
+l0
+L5 1
+VMk:JoYA1TfP^FRNJA2XbK0
+!s100 zT0OmKiT6OH9=a]MQ>8nn3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1771499211
+!i10b 1
+Z9 !s108 1771499211.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd|
+Z11 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 16 fcs_check_serial 0 22 Mk:JoYA1TfP^FRNJA2XbK0
+!i122 112
+l22
+L15 84
+VMoIcdeEBVA>0jFRQ:VmTC1
+!s100 zkaGi0VzmON[gWQzXczTA0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Efcs_check_serial_tb
+Z14 w1771443353
+R2
+R3
+!i122 113
+R4
+Z15 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd
+Z16 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd
+l0
+L4 1
+VQIA>:Z11]XRbcHeP40?[_1
+!s100 g2K:4RjoB;6>NZOZ;A:I^1
+R7
+32
+Z17 !s110 1771499212
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd|
+Z19 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 19 fcs_check_serial_tb 0 22 QIA>:Z11]XRbcHeP40?[_1
+!i122 113
+l33
+L7 78
+VVRPDB`^<_6l5:_R?^TCg>3
+!s100 6PDQmNb=Ukm239VWBF6e91
+R7
+32
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 19 fcs_check_serial_tb 0 22 6]3440cZj]lV9BZ0G2i@]1
+!i122 73
+l47
+L8 108
+VSJE_F@6:k@@:XDFa;flO81
+!s100 EN7fXP]L9dZ6D[0fM^g3m1
+R7
+32
+!s110 1771440443
+!i10b 1
+!s108 1771440443.000000
+R18
+R19
+!i113 1
+R12
+R13
+w1771440091
+Ereg
+Z20 w1771437650
+R2
+R3
+!i122 114
+R4
+Z21 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd
+Z22 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd
+l0
+L4 1
+V]jh]zEP6G`]L>@lGV]lc<1
+!s100 8WUA[037HRCF6IEGBAoeW3
+R7
+32
+R17
+!i10b 1
+Z23 !s108 1771499212.000000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd|
+Z25 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+Z26 DEx4 work 3 reg 0 22 ]jh]zEP6G`]L>@lGV]lc<1
+!i122 114
+l15
+Z27 L14 11
+Z28 VbTOgfk_CVSL<>FVRN;Iff2
+Z29 !s100 UOR^_mk^N^:h92MnOEdYK0
+R7
+32
+R17
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R12
+R13
+Etest123
+Z30 w1771414778
+R2
+R3
+!i122 1
+R4
+Z31 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd
+Z32 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd
+l0
+L5 1
+V_C=:Q:HGW^1`D4CcQ]JWn3
+!s100 @JOL40NYdV:b>f[bLkXQ@1
+R7
+32
+Z33 !s110 1771415118
+!i10b 1
+Z34 !s108 1771415118.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd|
+Z36 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 7 test123 0 22 _C=:Q:HGW^1`D4CcQ]JWn3
+!i122 1
+l13
+L12 4
+VUT_J0LbDi`?;EVolJ`oiH1
+!s100 Oz:Vb=Oz6M0SGYZ0LCWO01
+R7
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R12
+R13
+Etest123_tb
+Z37 w1771415114
+R2
+R3
+!i122 2
+R4
+Z38 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd
+Z39 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd
+l0
+L6 1
+V_;VfCVXiZif[TTVf2U><F1
+!s100 S=_B<n@>Y;mM^X7I55F1`3
+R7
+32
+R33
+!i10b 1
+R34
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd|
+Z41 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 10 test123_tb 0 22 _;VfCVXiZif[TTVf2U><F1
+!i122 2
+l24
+L10 47
+VAacSAMB2?2^knKX`foR?d1
+!s100 N:>JR0gznj65z7LK<LM?O1
+R7
+32
+R33
+!i10b 1
+R34
+R40
+R41
+!i113 1
+R12
+R13

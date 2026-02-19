@@ -1,0 +1,414 @@
+# Load canceled
+# Compile of Test123.vhd was successful.
+# Compile of Test123_tb.vhd failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of Test123.vhd was successful.
+# Compile of Test123_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+vsim work.Test123_tb
+# vsim work.Test123_tb 
+# Start time: 12:47:04 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.test123_tb(behavioral)
+# Loading work.test123(behavioral)
+add wave -position end sim:/test123_tb/*
+run
+run
+# WARNING: No extended dataflow license exists
+quit -sim
+# End time: 12:51:13 on Feb 18,2026, Elapsed time: 0:04:09
+# Errors: 0, Warnings: 10
+vsim work.test123
+# vsim work.test123 
+# Start time: 12:51:18 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.test123(behavioral)
+quit -sim
+# End time: 12:51:34 on Feb 18,2026, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 1
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of fcs_check_serial.vhd failed with 7 errors.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# 2 compiles, 2 failed with 9 errors.
+# Compile of fcs_check_serial.vhd failed with 7 errors.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# 2 compiles, 2 failed with 9 errors.
+# Compile of fcs_check_serial.vhd failed with 7 errors.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# 2 compiles, 2 failed with 9 errors.
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# 2 compiles, 2 failed with 3 errors.
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# 2 compiles, 2 failed with 3 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim fcs_check_serial_tb.vhd
+# OpenFile fcs_check_serial_tb.vhd
+vsim work.fcs_check_serial_tb
+# vsim work.fcs_check_serial_tb 
+# Start time: 13:57:13 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+quit -sim
+# End time: 14:05:11 on Feb 18,2026, Elapsed time: 0:07:58
+# Errors: 0, Warnings: 15
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# vsim work.fcs_check_serial_tb 
+# Start time: 15:02:25 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+run
+run
+run
+run
+quit -sim
+# End time: 15:14:44 on Feb 18,2026, Elapsed time: 0:12:19
+# Errors: 0, Warnings: 3
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# vsim work.fcs_check_serial_tb 
+# Start time: 15:15:21 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# End time: 15:18:33 on Feb 18,2026, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 3
+# vsim work.fcs_check_serial_tb 
+# Start time: 15:18:33 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# End time: 15:21:57 on Feb 18,2026, Elapsed time: 0:03:24
+# Errors: 0, Warnings: 2
+# vsim work.fcs_check_serial_tb 
+# Start time: 15:21:57 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# End time: 18:12:05 on Feb 18,2026, Elapsed time: 2:50:08
+# Errors: 0, Warnings: 4
+# vsim work.fcs_check_serial_tb 
+# Start time: 18:12:05 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+add wave -position end sim:/fcs_check_serial_tb/UUT/line__22/*
+# ** UI-Msg: (vish-4014) No objects found matching '/fcs_check_serial_tb/UUT/line__22/*'.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd failed with 4 errors.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of fcs_check_serial.vhd failed with 8 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 8 errors.
+# Compile of fcs_check_serial.vhd failed with 8 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 8 errors.
+# Compile of fcs_check_serial.vhd failed with 167 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 167 errors.
+# Compile of fcs_check_serial.vhd failed with 14 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 14 errors.
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# End time: 19:24:23 on Feb 18,2026, Elapsed time: 1:12:18
+# Errors: 0, Warnings: 16
+# vsim work.fcs_check_serial_tb 
+# Start time: 19:24:23 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+# Loading work.reg(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+add wave -position end sim:/fcs_check_serial_tb/stim_proc/*
+# (vish-4014) No objects found matching 'sim:/fcs_check_serial_tb/stim_proc/*'.
+add wave -position end sim:/fcs_check_serial_tb/stim_proc/*
+# (vish-4014) No objects found matching 'sim:/fcs_check_serial_tb/stim_proc/*'.
+add wave -position insertpoint sim:/fcs_check_serial_tb/stim_proc/*
+# (vish-4014) No objects found matching 'sim:/fcs_check_serial_tb/stim_proc/*'.
+add wave -position end sim:/fcs_check_serial_tb/UUT/line__94/*
+# ** UI-Msg: (vish-4014) No objects found matching '/fcs_check_serial_tb/UUT/line__94/*'.
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd failed with 1 errors.
+# Compile of REG.vhd was successful.
+# 3 compiles, 2 failed with 2 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd failed with 1 errors.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# End time: 19:34:00 on Feb 18,2026, Elapsed time: 0:09:37
+# Errors: 0, Warnings: 4
+# vsim work.fcs_check_serial_tb 
+# Start time: 19:34:00 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+# Loading work.reg(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# End time: 19:41:50 on Feb 18,2026, Elapsed time: 0:07:50
+# Errors: 0, Warnings: 3
+# vsim work.fcs_check_serial_tb 
+# Start time: 19:41:50 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+# Loading work.reg(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# End time: 19:47:36 on Feb 18,2026, Elapsed time: 0:05:46
+# Errors: 0, Warnings: 2
+# vsim work.fcs_check_serial_tb 
+# Start time: 19:47:37 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fcs_check_serial(behavioral)
+# Loading work.reg(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# End time: 20:05:59 on Feb 18,2026, Elapsed time: 0:18:22
+# Errors: 0, Warnings: 2
+# vsim work.fcs_check_serial_tb 
+# Start time: 20:05:59 on Feb 18,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_serial_tb/i_fcs_check_1
+run
+run
+run
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd failed with 4 errors.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd failed with 2 errors.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd failed with 9 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 9 errors.
+# Compile of fcs_check_serial.vhd failed with 4 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of fcs_check_serial.vhd failed with 2 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 2 errors.
+quit -sim
+# End time: 11:50:50 on Feb 19,2026, Elapsed time: 15:44:51
+# Errors: 0, Warnings: 12
+# Compile of fcs_check_serial.vhd failed with 1 errors.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# vsim work.fcs_check_serial_tb 
+# Start time: 11:52:15 on Feb 19,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_serial_tb/Comp1
+quit -sim
+# End time: 11:54:44 on Feb 19,2026, Elapsed time: 0:02:29
+# Errors: 0, Warnings: 4
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of REG.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.fcs_check_serial_tb
+# vsim work.fcs_check_serial_tb 
+# Start time: 12:07:03 on Feb 19,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_serial_tb/Comp1
