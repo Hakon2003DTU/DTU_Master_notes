@@ -1,6 +1,4 @@
 
-
-
 % polynomial
 G = [1, 0,0,0,0,0,1,0,0, 1,1,0,0,0,0,0,1, 0,0,0,1,1,1,0,1, 1,0,1,1,0,1,1,1];
 
@@ -17,15 +15,15 @@ Data = [0x00, 0x10, 0xA4, 0x7B, 0xEA, 0x80, 0x00, 0x12, ...
              0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, ...
              0x0E, 0x0F, 0x10, 0x11];
 
-% 2. Convert Hex to Binary Sequence
-% We use dec2bin to ensure each byte is 8 bits
-binStr = reshape(dec2bin(Data, 8).', 1, []); 
-M = double(binStr) - double('0'); % convert from ascii to numbers ()
-M(1:degree) = 1 - M(1:degree);% inverts the first 
+% convert from hex to binary vector
+binStr = reshape(dec2bin(Data, 8).', 1, []); %Convert Hex to Binary string
+M = double(binStr) - double('0'); % convert from ascii to numbers a binary vector
+
+% inverts the first 32 bits 
+M(1:degree) = 1 - M(1:degree);
 
 % Adding 32 zeros for the division
 M = [M, zeros(1, degree)];
-
 
 % Xor when the leading bit is '1' throgh out the data (exept the last 32 bits)
 for i = 1 : (length(M) - degree)
