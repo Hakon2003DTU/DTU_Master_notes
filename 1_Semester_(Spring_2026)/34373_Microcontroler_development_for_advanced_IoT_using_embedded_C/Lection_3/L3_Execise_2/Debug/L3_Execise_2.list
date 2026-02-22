@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  0001a87a  00000000  00000000  00010144  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000c62f  00000000  00000000  0002a9be  2**0
+ 17 .debug_line   0000c62d  00000000  00000000  0002a9be  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0009dad9  00000000  00000000  00036fed  2**0
+ 18 .debug_str    0009dad9  00000000  00000000  00036feb  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000d4ac6  2**0
+ 19 .comment      00000043  00000000  00000000  000d4ac4  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002738  00000000  00000000  000d4b0c  2**2
+ 20 .debug_frame  00002738  00000000  00000000  000d4b08  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 000000da  00000000  00000000  000d7244  2**0
+ 21 .debug_line_str 000000da  00000000  00000000  000d7240  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -195,10 +195,10 @@ int main(void)
  8000280:	20000028 	.word	0x20000028
 
 08000284 <HAL_TIM_PeriodElapsedCallback>:
+  {
 
   }
 }
-
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
  8000284:	b580      	push	{r7, lr}
@@ -586,15 +586,9 @@ void TIM1_UP_TIM16_IRQHandler(void)
 {
  8000408:	b580      	push	{r7, lr}
  800040a:	af00      	add	r7, sp, #0
-  /* USER CODE BEGIN TIM1_UP_TIM16_IRQn 0 */
-
-  /* USER CODE END TIM1_UP_TIM16_IRQn 0 */
   HAL_TIM_IRQHandler(&htim16);
  800040c:	4802      	ldr	r0, [pc, #8]	@ (8000418 <TIM1_UP_TIM16_IRQHandler+0x10>)
  800040e:	f001 ffb7 	bl	8002380 <HAL_TIM_IRQHandler>
-  /* USER CODE BEGIN TIM1_UP_TIM16_IRQn 1 */
-
-  /* USER CODE END TIM1_UP_TIM16_IRQn 1 */
 }
  8000412:	bf00      	nop
  8000414:	bd80      	pop	{r7, pc}
@@ -640,11 +634,6 @@ void MX_TIM16_Init(void)
 {
  8000440:	b580      	push	{r7, lr}
  8000442:	af00      	add	r7, sp, #0
-  /* USER CODE END TIM16_Init 0 */
-
-  /* USER CODE BEGIN TIM16_Init 1 */
-
-  /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
  8000444:	4b10      	ldr	r3, [pc, #64]	@ (8000488 <MX_TIM16_Init+0x48>)
  8000446:	4a11      	ldr	r2, [pc, #68]	@ (800048c <MX_TIM16_Init+0x4c>)
@@ -683,10 +672,6 @@ void MX_TIM16_Init(void)
     Error_Handler();
  800047e:	f7ff ff69 	bl	8000354 <Error_Handler>
   }
-  /* USER CODE BEGIN TIM16_Init 2 */
-
-  /* USER CODE END TIM16_Init 2 */
-
 }
  8000482:	bf00      	nop
  8000484:	bd80      	pop	{r7, pc}

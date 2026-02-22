@@ -20,3 +20,5 @@ add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
 run
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
+# End time: 22:21:14 on Feb 22,2026, Elapsed time: 53:02:38
+# Errors: 0, Warnings: 3

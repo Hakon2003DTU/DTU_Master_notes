@@ -71,11 +71,8 @@ int main(void)
   MX_TIM16_Init();
   HAL_TIM_Base_Start_IT(&htim16);
   while (1)
-  {
-
-  }
+  {}
 }
-
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
         HAL_GPIO_TogglePin(Output1_GPIO_Port, Output1_Pin); // Toggle pin PC9

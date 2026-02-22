@@ -29,14 +29,6 @@ TIM_HandleTypeDef htim16;
 /* TIM16 init function */
 void MX_TIM16_Init(void)
 {
-
-  /* USER CODE BEGIN TIM16_Init 0 */
-
-  /* USER CODE END TIM16_Init 0 */
-
-  /* USER CODE BEGIN TIM16_Init 1 */
-
-  /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
   htim16.Init.Prescaler = 8000;
   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
@@ -48,10 +40,6 @@ void MX_TIM16_Init(void)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN TIM16_Init 2 */
-
-  /* USER CODE END TIM16_Init 2 */
-
 }
 
 void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)

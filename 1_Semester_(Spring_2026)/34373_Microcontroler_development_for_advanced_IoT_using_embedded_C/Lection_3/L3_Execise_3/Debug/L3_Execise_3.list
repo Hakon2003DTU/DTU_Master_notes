@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  0001a87a  00000000  00000000  00010124  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000c62e  00000000  00000000  0002a99e  2**0
+ 17 .debug_line   0000c62c  00000000  00000000  0002a99e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0009dae0  00000000  00000000  00036fcc  2**0
+ 18 .debug_str    0009dae0  00000000  00000000  00036fca  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000d4aac  2**0
+ 19 .comment      00000043  00000000  00000000  000d4aaa  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00002738  00000000  00000000  000d4af0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -88,7 +88,6 @@ void MX_GPIO_Init(void)
  80001c8:	b580      	push	{r7, lr}
  80001ca:	b088      	sub	sp, #32
  80001cc:	af00      	add	r7, sp, #0
-
   GPIO_InitTypeDef GPIO_InitStruct = {0};
  80001ce:	f107 030c 	add.w	r3, r7, #12
  80001d2:	2200      	movs	r2, #0
@@ -97,7 +96,6 @@ void MX_GPIO_Init(void)
  80001d8:	609a      	str	r2, [r3, #8]
  80001da:	60da      	str	r2, [r3, #12]
  80001dc:	611a      	str	r2, [r3, #16]
-
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
  80001de:	4b18      	ldr	r3, [pc, #96]	@ (8000240 <MX_GPIO_Init+0x78>)
@@ -121,14 +119,12 @@ void MX_GPIO_Init(void)
  8000206:	f403 0380 	and.w	r3, r3, #4194304	@ 0x400000
  800020a:	607b      	str	r3, [r7, #4]
  800020c:	687b      	ldr	r3, [r7, #4]
-
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(Output1_GPIO_Port, Output1_Pin, GPIO_PIN_RESET);
  800020e:	2200      	movs	r2, #0
  8000210:	f44f 7100 	mov.w	r1, #512	@ 0x200
  8000214:	480b      	ldr	r0, [pc, #44]	@ (8000244 <MX_GPIO_Init+0x7c>)
  8000216:	f000 fc67 	bl	8000ae8 <HAL_GPIO_WritePin>
-
   /*Configure GPIO pin : Output1_Pin */
   GPIO_InitStruct.Pin = Output1_Pin;
  800021a:	f44f 7300 	mov.w	r3, #512	@ 0x200
@@ -147,7 +143,6 @@ void MX_GPIO_Init(void)
  8000230:	4619      	mov	r1, r3
  8000232:	4804      	ldr	r0, [pc, #16]	@ (8000244 <MX_GPIO_Init+0x7c>)
  8000234:	f000 fae6 	bl	8000804 <HAL_GPIO_Init>
-
 }
  8000238:	bf00      	nop
  800023a:	3720      	adds	r7, #32
@@ -183,10 +178,8 @@ int main(void)
  8000268:	20000028 	.word	0x20000028
 
 0800026c <HAL_TIM_PeriodElapsedCallback>:
-
-  }
+  {}
 }
-
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
  800026c:	b580      	push	{r7, lr}
@@ -627,11 +620,6 @@ void MX_TIM16_Init(void)
 {
  8000428:	b580      	push	{r7, lr}
  800042a:	af00      	add	r7, sp, #0
-  /* USER CODE END TIM16_Init 0 */
-
-  /* USER CODE BEGIN TIM16_Init 1 */
-
-  /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
  800042c:	4b0f      	ldr	r3, [pc, #60]	@ (800046c <MX_TIM16_Init+0x44>)
  800042e:	4a10      	ldr	r2, [pc, #64]	@ (8000470 <MX_TIM16_Init+0x48>)
@@ -670,10 +658,6 @@ void MX_TIM16_Init(void)
     Error_Handler();
  8000464:	f7ff ff6a 	bl	800033c <Error_Handler>
   }
-  /* USER CODE BEGIN TIM16_Init 2 */
-
-  /* USER CODE END TIM16_Init 2 */
-
 }
  8000468:	bf00      	nop
  800046a:	bd80      	pop	{r7, pc}
