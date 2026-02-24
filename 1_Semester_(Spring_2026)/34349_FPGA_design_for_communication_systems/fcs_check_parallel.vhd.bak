@@ -13,24 +13,18 @@ entity fcs_check_parallel is
     fcs_error      : out std_logic 			-- indicates an error.
   );
 end fcs_check_parallel;
-
-
-
-
-
-
 architecture behavioral of fcs_check_parallel is
   signal Reg           : std_logic_vector(31 downto 0); -- The 32 registers used to store data
-  signal Counter       : unsigned(2 downto 0);		-- Counter that counts number of times 8 bits have been sendt
+  signal Counter       : unsigned(1 downto 0);		-- Counter that counts number of times 8 bits have been sendt
   signal Data_insert   : std_logic_vector(7 downto 0);	-- Data that should be inserted
   signal Checksum_Start: std_logic;			-- checksum goes high when the checksum is being inserted
 
 begin
 
 	-- Data insert process (The first and last 32 bits has due to the way  )
-	process(clk,start_of_frame,end_of_frame,data_in)
+	process(start_of_frame,end_of_frame,data_in,Counter)
 	Begin
-		if(start_of_frame = '1' or end_of_frame = '1' or Counter < 4) then
+		if(start_of_frame = '1' or end_of_frame = '1' or Counter < 3) then
 			Data_insert <= not data_in;
 		else
 			Data_insert <= data_in;
@@ -43,7 +37,7 @@ begin
 		if (reset = '1') then -- reset the registor and the 
 			Reg     <= (others => '0');
       			Counter <= (others => '0');
-			fcs_error   <= 'X';
+			fcs_error   <= '1';
 
 		elsif rising_edge(clk) then
 			if (end_of_frame = '1') then
@@ -52,18 +46,18 @@ begin
 		
 			if (start_of_frame = '1' or end_of_frame = '1') then 
 				Counter <= (others => '0');
-			elsif(Counter < 4) then 
+			elsif(Counter < 3) then 
 				Counter <= Counter + 1;
 			end if;
 
-		Reg(0) <= Reg(24) xor Reg(30) xor data_in(0);
-		Reg(1) <= Reg(24) xor Reg(25) xor Reg(30) xor Reg(31) xor data_in(1);
-		Reg(2) <= Reg(24) xor Reg(25) xor Reg(26) xor Reg(30) xor Reg(31) xor data_in(2);
-		Reg(3) <= Reg(25) xor Reg(26) xor Reg(27) xor Reg(31) xor data_in(3);
-		Reg(4) <= Reg(24) xor Reg(26) xor Reg(27) xor Reg(28) xor Reg(30) xor data_in(4);
-		Reg(5) <= Reg(24) xor Reg(25) xor Reg(27) xor Reg(28) xor Reg(29) xor Reg(30) xor Reg(31) xor data_in(5);
-		Reg(6) <= Reg(25) xor Reg(26) xor Reg(28) xor Reg(29) xor Reg(30) xor Reg(31) xor data_in(6);
-		Reg(7) <= Reg(24) xor Reg(26) xor Reg(27) xor Reg(29) xor Reg(31) xor data_in(7);
+		Reg(0) <= Reg(24) xor Reg(30) xor Data_insert(0);
+		Reg(1) <= Reg(24) xor Reg(25) xor Reg(30) xor Reg(31) xor Data_insert(1);
+		Reg(2) <= Reg(24) xor Reg(25) xor Reg(26) xor Reg(30) xor Reg(31) xor Data_insert(2);
+		Reg(3) <= Reg(25) xor Reg(26) xor Reg(27) xor Reg(31) xor Data_insert(3);
+		Reg(4) <= Reg(24) xor Reg(26) xor Reg(27) xor Reg(28) xor Reg(30) xor Data_insert(4);
+		Reg(5) <= Reg(24) xor Reg(25) xor Reg(27) xor Reg(28) xor Reg(29) xor Reg(30) xor Reg(31) xor Data_insert(5);
+		Reg(6) <= Reg(25) xor Reg(26) xor Reg(28) xor Reg(29) xor Reg(30) xor Reg(31) xor Data_insert(6);
+		Reg(7) <= Reg(24) xor Reg(26) xor Reg(27) xor Reg(29) xor Reg(31) xor Data_insert(7);
 		Reg(8) <= Reg(0) xor Reg(24) xor Reg(25) xor Reg(27) xor Reg(28);
 		Reg(9) <= Reg(1) xor Reg(25) xor Reg(26) xor Reg(28) xor Reg(29);
 		Reg(10) <= Reg(2) xor Reg(24) xor Reg(26) xor Reg(27) xor Reg(29);
@@ -88,23 +82,17 @@ begin
 		Reg(29) <= Reg(21) xor Reg(27) xor Reg(30) xor Reg(31);
 		Reg(30) <= Reg(22) xor Reg(28) xor Reg(31);
 		Reg(31) <= Reg(23) xor Reg(29);
-
-
-		if (Checksum_Start = '1' and Counter = 4) then
-            		if (Reg = X"00000000") then
+		
+		if (Reg = X"00000000" and Checksum_Start = '1') then
                 		fcs_error <= '0';
-            		else
-                		fcs_error <= '1';
-            		end if;
-            	Checksum_Start <= '0'; 
+            			Checksum_Start <= '0'; 
         	end if;
 
 	end if;
+
+		
+	
+	
 end process;
-  
-
-
-
-
 end behavioral;
 

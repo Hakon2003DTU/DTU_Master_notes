@@ -1,11 +1,6 @@
-# Compile of fcs_check_serial.vhd was successful.
-# Compile of fcs_check_serial_tb.vhd was successful.
-# Compile of fcs_check_parallel.vhd was successful.
-# Compile of fcs_check_parallel_tb.vhd was successful.
-# 4 compiles, 0 failed with no errors.
 vsim -gui work.fcs_check_parallel_tb
 # vsim -gui work.fcs_check_parallel_tb 
-# Start time: 17:18:36 on Feb 20,2026
+# Start time: 15:30:51 on Feb 23,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -20,5 +15,158 @@ add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
 run
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 #    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
-# End time: 22:21:14 on Feb 22,2026, Elapsed time: 53:02:38
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+quit -sim
+# End time: 15:38:59 on Feb 23,2026, Elapsed time: 0:08:08
+# Errors: 0, Warnings: 2
+vsim -gui work.fcs_check_parallel_tb
+# vsim -gui work.fcs_check_parallel_tb 
+# Start time: 15:39:06 on Feb 23,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_parallel_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_parallel(behavioral)
+quit -sim
+# End time: 15:39:32 on Feb 23,2026, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 1
+vsim -gui work.fcs_check_parallel_tb
+# vsim -gui work.fcs_check_parallel_tb 
+# Start time: 15:39:47 on Feb 23,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_parallel_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_parallel(behavioral)
+add wave -position end sim:/fcs_check_parallel_tb/*
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
+quit -sim
+# End time: 15:43:48 on Feb 23,2026, Elapsed time: 0:04:01
+# Errors: 0, Warnings: 2
+vsim -gui work.fcs_check_parallel_tb
+# vsim -gui work.fcs_check_parallel_tb 
+# Start time: 15:43:55 on Feb 23,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_parallel_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_parallel(behavioral)
+add wave -position end sim:/fcs_check_parallel_tb/*
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
+vsim -gui work.fcs_check_parallel_tb
+# End time: 15:50:18 on Feb 23,2026, Elapsed time: 0:06:23
+# Errors: 0, Warnings: 2
+# vsim -gui work.fcs_check_parallel_tb 
+# Start time: 15:50:18 on Feb 23,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_parallel_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_parallel(behavioral)
+add wave -position end sim:/fcs_check_parallel_tb/*
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
+quit -sim
+# End time: 16:07:10 on Feb 23,2026, Elapsed time: 0:16:52
+# Errors: 0, Warnings: 2
+vsim -gui work.fcs_check_parallel_tb
+# vsim -gui work.fcs_check_parallel_tb 
+# Start time: 16:07:25 on Feb 23,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_parallel_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_parallel(behavioral)
+add wave -position end sim:/fcs_check_parallel_tb/*
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.fcs_check_parallel_tb
+# End time: 16:09:28 on Feb 23,2026, Elapsed time: 0:02:03
 # Errors: 0, Warnings: 3
+# vsim -gui work.fcs_check_parallel_tb 
+# Start time: 16:09:28 on Feb 23,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_parallel_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_parallel(behavioral)
+add wave -position end sim:/fcs_check_parallel_tb/*
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
+quit -sim
+# End time: 16:15:19 on Feb 23,2026, Elapsed time: 0:05:51
+# Errors: 0, Warnings: 2
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.fcs_check_parallel_tb
+# vsim -gui work.fcs_check_parallel_tb 
+# Start time: 16:15:44 on Feb 23,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_parallel_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_parallel(behavioral)
+add wave -position end sim:/fcs_check_parallel_tb/*
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
+add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
+# End time: 16:17:13 on Feb 23,2026, Elapsed time: 0:01:29
+# Errors: 0, Warnings: 4

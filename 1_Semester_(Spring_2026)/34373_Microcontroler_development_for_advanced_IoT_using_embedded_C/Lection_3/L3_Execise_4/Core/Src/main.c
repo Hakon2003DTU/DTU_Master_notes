@@ -64,9 +64,7 @@ void SystemClock_Config(void);
   */
 int main(void)
 {
-
   HAL_Init();
-
   SystemClock_Config();
   MX_GPIO_Init();
   MX_TIM17_Init();
@@ -77,13 +75,10 @@ int main(void)
 
 	  if (HAL_GPIO_ReadPin(But1_GPIO_Port, But1_Pin) == GPIO_PIN_RESET)
 	      {
-
 	          HAL_TIM_OnePulse_Start(&htim17, TIM_CHANNEL_1);
 	          __HAL_TIM_MOE_ENABLE(&htim17);
 	          HAL_Delay(200);
-	          while(HAL_GPIO_ReadPin(But1_GPIO_Port, But1_Pin) == GPIO_PIN_RESET);
 	      }
-
   }
 }
 /**

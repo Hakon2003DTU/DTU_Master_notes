@@ -51,7 +51,7 @@ begin
   end process;
 
   -- Data_Simulation
-  Data_Sim : process
+ Data_Sim : process
   begin
     -- Start by reseting everything
     Test_reset <= '1';
@@ -64,11 +64,9 @@ begin
       else
         Test_start_of_frame <= '0';
       end if;
-
       Test_data_in <= Ethernet_packet(i);
 
-      -- goes high when 32 bits remain(FCS)
-      if i = 31 then
+      if i = 31 then -- goes high when 32 bits remain(FCS)
         Test_end_of_frame <= '1';
       else
         Test_end_of_frame <= '0';
