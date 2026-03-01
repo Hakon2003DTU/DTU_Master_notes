@@ -233,96 +233,96 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  80002c2:	681b      	ldr	r3, [r3, #0]
  80002c4:	4a23      	ldr	r2, [pc, #140]	@ (8000354 <HAL_UART_RxCpltCallback+0x9c>)
  80002c6:	4293      	cmp	r3, r2
- 80002c8:	d13f      	bne.n	800034a <HAL_UART_RxCpltCallback+0x92>
+ 80002c8:	d140      	bne.n	800034c <HAL_UART_RxCpltCallback+0x94>
   {
-
-
-	  if (Data_Re == '\r'){ // buffer full
+    if (Data_Re == '\r'){
  80002ca:	4b23      	ldr	r3, [pc, #140]	@ (8000358 <HAL_UART_RxCpltCallback+0xa0>)
  80002cc:	781b      	ldrb	r3, [r3, #0]
  80002ce:	2b0d      	cmp	r3, #13
- 80002d0:	d123      	bne.n	800031a <HAL_UART_RxCpltCallback+0x62>
-		  Buffer[Index]='\0';// closeing the buffer
+ 80002d0:	d124      	bne.n	800031c <HAL_UART_RxCpltCallback+0x64>
+      Buffer[Index] = '\0'; // Close the string
  80002d2:	4b22      	ldr	r3, [pc, #136]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
  80002d4:	781b      	ldrb	r3, [r3, #0]
  80002d6:	461a      	mov	r2, r3
  80002d8:	4b21      	ldr	r3, [pc, #132]	@ (8000360 <HAL_UART_RxCpltCallback+0xa8>)
  80002da:	2100      	movs	r1, #0
  80002dc:	5499      	strb	r1, [r3, r2]
-		  if (strcmp(Buffer,"LED on")){
+
+      // Corrected logic: strcmp returns 0 on success
+      if (strcmp(Buffer, "LED on") == 0){
  80002de:	4921      	ldr	r1, [pc, #132]	@ (8000364 <HAL_UART_RxCpltCallback+0xac>)
  80002e0:	481f      	ldr	r0, [pc, #124]	@ (8000360 <HAL_UART_RxCpltCallback+0xa8>)
  80002e2:	f7ff ff71 	bl	80001c8 <strcmp>
  80002e6:	4603      	mov	r3, r0
  80002e8:	2b00      	cmp	r3, #0
- 80002ea:	d005      	beq.n	80002f8 <HAL_UART_RxCpltCallback+0x40>
-			  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+ 80002ea:	d106      	bne.n	80002fa <HAL_UART_RxCpltCallback+0x42>
+        HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
  80002ec:	2201      	movs	r2, #1
  80002ee:	f44f 5100 	mov.w	r1, #8192	@ 0x2000
  80002f2:	481d      	ldr	r0, [pc, #116]	@ (8000368 <HAL_UART_RxCpltCallback+0xb0>)
  80002f4:	f000 fd00 	bl	8000cf8 <HAL_GPIO_WritePin>
-		  }
-		  if (strcmp(Buffer,"LED off")){
- 80002f8:	491c      	ldr	r1, [pc, #112]	@ (800036c <HAL_UART_RxCpltCallback+0xb4>)
- 80002fa:	4819      	ldr	r0, [pc, #100]	@ (8000360 <HAL_UART_RxCpltCallback+0xa8>)
- 80002fc:	f7ff ff64 	bl	80001c8 <strcmp>
- 8000300:	4603      	mov	r3, r0
- 8000302:	2b00      	cmp	r3, #0
- 8000304:	d005      	beq.n	8000312 <HAL_UART_RxCpltCallback+0x5a>
-			  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
- 8000306:	2200      	movs	r2, #0
- 8000308:	f44f 5100 	mov.w	r1, #8192	@ 0x2000
- 800030c:	4816      	ldr	r0, [pc, #88]	@ (8000368 <HAL_UART_RxCpltCallback+0xb0>)
- 800030e:	f000 fcf3 	bl	8000cf8 <HAL_GPIO_WritePin>
-		  }
-		  Index=0;
- 8000312:	4b12      	ldr	r3, [pc, #72]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
- 8000314:	2200      	movs	r2, #0
- 8000316:	701a      	strb	r2, [r3, #0]
- 8000318:	e012      	b.n	8000340 <HAL_UART_RxCpltCallback+0x88>
-	  }
-	  else{ 			// insert data to buffer
+ 80002f8:	e00c      	b.n	8000314 <HAL_UART_RxCpltCallback+0x5c>
+      }
+      else if (strcmp(Buffer, "LED off") == 0){
+ 80002fa:	491c      	ldr	r1, [pc, #112]	@ (800036c <HAL_UART_RxCpltCallback+0xb4>)
+ 80002fc:	4818      	ldr	r0, [pc, #96]	@ (8000360 <HAL_UART_RxCpltCallback+0xa8>)
+ 80002fe:	f7ff ff63 	bl	80001c8 <strcmp>
+ 8000302:	4603      	mov	r3, r0
+ 8000304:	2b00      	cmp	r3, #0
+ 8000306:	d105      	bne.n	8000314 <HAL_UART_RxCpltCallback+0x5c>
+        HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+ 8000308:	2200      	movs	r2, #0
+ 800030a:	f44f 5100 	mov.w	r1, #8192	@ 0x2000
+ 800030e:	4816      	ldr	r0, [pc, #88]	@ (8000368 <HAL_UART_RxCpltCallback+0xb0>)
+ 8000310:	f000 fcf2 	bl	8000cf8 <HAL_GPIO_WritePin>
+      }
 
-		  if (Index > 10){
- 800031a:	4b10      	ldr	r3, [pc, #64]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
- 800031c:	781b      	ldrb	r3, [r3, #0]
- 800031e:	2b0a      	cmp	r3, #10
- 8000320:	d903      	bls.n	800032a <HAL_UART_RxCpltCallback+0x72>
-			  Index=0;
- 8000322:	4b0e      	ldr	r3, [pc, #56]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
- 8000324:	2200      	movs	r2, #0
- 8000326:	701a      	strb	r2, [r3, #0]
- 8000328:	e00a      	b.n	8000340 <HAL_UART_RxCpltCallback+0x88>
-		  }
-		  else{
-			  Buffer[Index++]=Data_Re;
- 800032a:	4b0c      	ldr	r3, [pc, #48]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
- 800032c:	781b      	ldrb	r3, [r3, #0]
- 800032e:	1c5a      	adds	r2, r3, #1
- 8000330:	b2d1      	uxtb	r1, r2
- 8000332:	4a0a      	ldr	r2, [pc, #40]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
- 8000334:	7011      	strb	r1, [r2, #0]
- 8000336:	461a      	mov	r2, r3
- 8000338:	4b07      	ldr	r3, [pc, #28]	@ (8000358 <HAL_UART_RxCpltCallback+0xa0>)
- 800033a:	7819      	ldrb	r1, [r3, #0]
- 800033c:	4b08      	ldr	r3, [pc, #32]	@ (8000360 <HAL_UART_RxCpltCallback+0xa8>)
- 800033e:	5499      	strb	r1, [r3, r2]
-		  }
+      Index = 0; // Reset buffer index
+ 8000314:	4b11      	ldr	r3, [pc, #68]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
+ 8000316:	2200      	movs	r2, #0
+ 8000318:	701a      	strb	r2, [r3, #0]
+ 800031a:	e012      	b.n	8000342 <HAL_UART_RxCpltCallback+0x8a>
+    }
+    else {
+      if (Index < 19){ // Safety check: Buffer is size 20
+ 800031c:	4b0f      	ldr	r3, [pc, #60]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
+ 800031e:	781b      	ldrb	r3, [r3, #0]
+ 8000320:	2b12      	cmp	r3, #18
+ 8000322:	d80b      	bhi.n	800033c <HAL_UART_RxCpltCallback+0x84>
+        Buffer[Index++] = Data_Re;
+ 8000324:	4b0d      	ldr	r3, [pc, #52]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
+ 8000326:	781b      	ldrb	r3, [r3, #0]
+ 8000328:	1c5a      	adds	r2, r3, #1
+ 800032a:	b2d1      	uxtb	r1, r2
+ 800032c:	4a0b      	ldr	r2, [pc, #44]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
+ 800032e:	7011      	strb	r1, [r2, #0]
+ 8000330:	461a      	mov	r2, r3
+ 8000332:	4b09      	ldr	r3, [pc, #36]	@ (8000358 <HAL_UART_RxCpltCallback+0xa0>)
+ 8000334:	7819      	ldrb	r1, [r3, #0]
+ 8000336:	4b0a      	ldr	r3, [pc, #40]	@ (8000360 <HAL_UART_RxCpltCallback+0xa8>)
+ 8000338:	5499      	strb	r1, [r3, r2]
+ 800033a:	e002      	b.n	8000342 <HAL_UART_RxCpltCallback+0x8a>
+      }
+      else {
+        Index = 0; // Avoid overflow
+ 800033c:	4b07      	ldr	r3, [pc, #28]	@ (800035c <HAL_UART_RxCpltCallback+0xa4>)
+ 800033e:	2200      	movs	r2, #0
+ 8000340:	701a      	strb	r2, [r3, #0]
+      }
+    }
 
-	  }
-
+    // Restart interrupt
     HAL_UART_Receive_IT(&huart2, &Data_Re, 1);
- 8000340:	2201      	movs	r2, #1
- 8000342:	4905      	ldr	r1, [pc, #20]	@ (8000358 <HAL_UART_RxCpltCallback+0xa0>)
- 8000344:	480a      	ldr	r0, [pc, #40]	@ (8000370 <HAL_UART_RxCpltCallback+0xb8>)
- 8000346:	f001 ff5d 	bl	8002204 <HAL_UART_Receive_IT>
+ 8000342:	2201      	movs	r2, #1
+ 8000344:	4904      	ldr	r1, [pc, #16]	@ (8000358 <HAL_UART_RxCpltCallback+0xa0>)
+ 8000346:	480a      	ldr	r0, [pc, #40]	@ (8000370 <HAL_UART_RxCpltCallback+0xb8>)
+ 8000348:	f001 ff5c 	bl	8002204 <HAL_UART_Receive_IT>
   }
 }
- 800034a:	bf00      	nop
- 800034c:	3708      	adds	r7, #8
- 800034e:	46bd      	mov	sp, r7
- 8000350:	bd80      	pop	{r7, pc}
- 8000352:	bf00      	nop
+ 800034c:	bf00      	nop
+ 800034e:	3708      	adds	r7, #8
+ 8000350:	46bd      	mov	sp, r7
+ 8000352:	bd80      	pop	{r7, pc}
  8000354:	40004400 	.word	0x40004400
  8000358:	20000028 	.word	0x20000028
  800035c:	20000040 	.word	0x20000040

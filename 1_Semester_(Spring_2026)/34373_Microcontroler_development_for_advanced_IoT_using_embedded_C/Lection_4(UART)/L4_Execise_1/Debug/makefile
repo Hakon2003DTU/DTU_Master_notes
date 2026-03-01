@@ -61,7 +61,7 @@ main-build: L4_Execise_1.elf secondary-outputs
 
 # Tool invocations
 L4_Execise_1.elf L4_Execise_1.map: $(OBJS) $(USER_OBJS) C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34373_Microcontroler_development_for_advanced_IoT_using_embedded_C\Lection_4(UART)\L4_Execise_1\STM32F302R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "L4_Execise_1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34373_Microcontroler_development_for_advanced_IoT_using_embedded_C\Lection_4(UART)\L4_Execise_1\STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="L4_Execise_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "L4_Execise_1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34373_Microcontroler_development_for_advanced_IoT_using_embedded_C\Lection_4(UART)\L4_Execise_1\STM32F302R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="L4_Execise_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

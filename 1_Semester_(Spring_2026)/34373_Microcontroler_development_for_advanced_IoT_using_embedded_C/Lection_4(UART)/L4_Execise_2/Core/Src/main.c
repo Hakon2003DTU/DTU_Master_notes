@@ -85,29 +85,29 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   if (huart->Instance == USART2)
   {
+    if (Data_Re == '\r'){
+      Buffer[Index] = '\0'; // Close the string
 
+      // Corrected logic: strcmp returns 0 on success
+      if (strcmp(Buffer, "LED on") == 0){
+        HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+      }
+      else if (strcmp(Buffer, "LED off") == 0){
+        HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+      }
 
-	  if (Data_Re == '\r'){ // buffer full
-		  Buffer[Index]='\0';// closeing the buffer
-		  if (strcmp(Buffer,"LED on")){
-			  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
-		  }
-		  if (strcmp(Buffer,"LED off")){
-			  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
-		  }
-		  Index=0;
-	  }
-	  else{ 			// insert data to buffer
+      Index = 0; // Reset buffer index
+    }
+    else {
+      if (Index < 19){ // Safety check: Buffer is size 20
+        Buffer[Index++] = Data_Re;
+      }
+      else {
+        Index = 0; // Avoid overflow
+      }
+    }
 
-		  if (Index > 10){
-			  Index=0;
-		  }
-		  else{
-			  Buffer[Index++]=Data_Re;
-		  }
-
-	  }
-
+    // Restart interrupt
     HAL_UART_Receive_IT(&huart2, &Data_Re, 1);
   }
 }
