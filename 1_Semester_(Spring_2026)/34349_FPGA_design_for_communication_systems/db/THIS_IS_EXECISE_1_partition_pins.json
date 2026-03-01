@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "fcs_error",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "end_of_frame",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "start_of_frame",
+					"strict" : false
+				},
+				{
+					"name" : "data_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

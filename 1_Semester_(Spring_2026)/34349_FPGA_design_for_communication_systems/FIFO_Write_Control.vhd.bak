@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity FIFO_Write_Control is
+port (
+reset : in std_logic;
+wclk : in std_logic;
+rclk : in std_logic;
+write_enable : in std_logic;
+read_enable : in std_logic;
+fifo_occu_in : out std_logic_vector(4 downto 0);
+fifo_occu_out : out std_logic_vector(4 downto 0);
+write_data_in : in std_logic_vector(7 downto 0);
+read_data_out : out std_logic_vector(7 downto 0)
+);
+end FIFO_Write_Control;
+
+architecture behavioral of FIFO_Write_Control is
+ -- Insert signals 
+begin
+-- insert	
+
+
+end behavioral;
+
+
+
+

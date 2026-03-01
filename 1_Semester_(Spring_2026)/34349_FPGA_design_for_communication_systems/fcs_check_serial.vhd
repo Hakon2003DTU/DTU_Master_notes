@@ -15,9 +15,9 @@ end fcs_check_serial;
 architecture behavioral of fcs_check_serial is
  
   signal Reg           : std_logic_vector(31 downto 0); --The 32 registers used to store data
-  signal Counter       : unsigned(4 downto 0);		-- counter that counts number of bits
-  signal Data_insert   : std_logic;			-- Data that should be inserted
-  signal Checksum_Start: std_logic;			-- checksum goes high when the checksum is being inserted
+  signal Counter       : unsigned(4 downto 0);-- counter that counts number of bits
+  signal Data_insert   : std_logic;	-- Data that should be inserted
+  signal Checksum_Start: std_logic;	-- checksum goes high when the checksum is being inserted
 
 begin
 
@@ -91,8 +91,6 @@ Begin
             		end if;
             	Checksum_Start <= '0'; 
         	end if;
-
 	end if;
 end process;
-  
 end behavioral;

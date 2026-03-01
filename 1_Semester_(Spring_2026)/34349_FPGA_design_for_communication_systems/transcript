@@ -1,172 +1,104 @@
-vsim -gui work.fcs_check_parallel_tb
-# vsim -gui work.fcs_check_parallel_tb 
-# Start time: 15:30:51 on Feb 23,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.fcs_check_parallel_tb(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.fcs_check_parallel(behavioral)
-add wave -position end sim:/fcs_check_parallel_tb/*
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-quit -sim
-# End time: 15:38:59 on Feb 23,2026, Elapsed time: 0:08:08
-# Errors: 0, Warnings: 2
-vsim -gui work.fcs_check_parallel_tb
-# vsim -gui work.fcs_check_parallel_tb 
-# Start time: 15:39:06 on Feb 23,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.fcs_check_parallel_tb(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.fcs_check_parallel(behavioral)
-quit -sim
-# End time: 15:39:32 on Feb 23,2026, Elapsed time: 0:00:26
-# Errors: 0, Warnings: 1
-vsim -gui work.fcs_check_parallel_tb
-# vsim -gui work.fcs_check_parallel_tb 
-# Start time: 15:39:47 on Feb 23,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.fcs_check_parallel_tb(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.fcs_check_parallel(behavioral)
-add wave -position end sim:/fcs_check_parallel_tb/*
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
-quit -sim
-# End time: 15:43:48 on Feb 23,2026, Elapsed time: 0:04:01
-# Errors: 0, Warnings: 2
-vsim -gui work.fcs_check_parallel_tb
-# vsim -gui work.fcs_check_parallel_tb 
-# Start time: 15:43:55 on Feb 23,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.fcs_check_parallel_tb(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.fcs_check_parallel(behavioral)
-add wave -position end sim:/fcs_check_parallel_tb/*
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
-vsim -gui work.fcs_check_parallel_tb
-# End time: 15:50:18 on Feb 23,2026, Elapsed time: 0:06:23
-# Errors: 0, Warnings: 2
-# vsim -gui work.fcs_check_parallel_tb 
-# Start time: 15:50:18 on Feb 23,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.fcs_check_parallel_tb(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.fcs_check_parallel(behavioral)
-add wave -position end sim:/fcs_check_parallel_tb/*
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
-quit -sim
-# End time: 16:07:10 on Feb 23,2026, Elapsed time: 0:16:52
-# Errors: 0, Warnings: 2
-vsim -gui work.fcs_check_parallel_tb
-# vsim -gui work.fcs_check_parallel_tb 
-# Start time: 16:07:25 on Feb 23,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.fcs_check_parallel_tb(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.fcs_check_parallel(behavioral)
-add wave -position end sim:/fcs_check_parallel_tb/*
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
 # Compile of fcs_check_serial.vhd was successful.
 # Compile of fcs_check_serial_tb.vhd was successful.
 # Compile of fcs_check_parallel.vhd was successful.
 # Compile of fcs_check_parallel_tb.vhd was successful.
-# 4 compiles, 0 failed with no errors.
-vsim -gui work.fcs_check_parallel_tb
-# End time: 16:09:28 on Feb 23,2026, Elapsed time: 0:02:03
-# Errors: 0, Warnings: 3
-# vsim -gui work.fcs_check_parallel_tb 
-# Start time: 16:09:28 on Feb 23,2026
+# Compile of async_fifo.vhd was successful.
+# Compile of FIFO_Write_Control.vhd was successful.
+# Compile of FIFO_Read_Control.vhd was successful.
+# Compile of Sync.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# Compile of async_fifo.vhd was successful.
+# Compile of FIFO_Write_Control.vhd was successful.
+# Compile of FIFO_Read_Control.vhd was successful.
+# Compile of Sync.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.fcs_check_serial_tb
+# vsim -gui work.fcs_check_serial_tb 
+# Start time: 13:38:47 on Feb 25,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.fcs_check_parallel_tb(behavior)
+# Loading work.fcs_check_serial_tb(behavior)
 # Loading ieee.numeric_std(body)
-# Loading work.fcs_check_parallel(behavioral)
-add wave -position end sim:/fcs_check_parallel_tb/*
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
+# Loading work.fcs_check_serial(behavioral)
 run
 # ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_serial_tb/Comp1
 quit -sim
-# End time: 16:15:19 on Feb 23,2026, Elapsed time: 0:05:51
-# Errors: 0, Warnings: 2
-# Compile of fcs_check_serial.vhd was successful.
-# Compile of fcs_check_serial_tb.vhd was successful.
-# Compile of fcs_check_parallel.vhd was successful.
-# Compile of fcs_check_parallel_tb.vhd was successful.
-# 4 compiles, 0 failed with no errors.
-# Compile of fcs_check_serial.vhd was successful.
-# Compile of fcs_check_serial_tb.vhd was successful.
-# Compile of fcs_check_parallel.vhd was successful.
-# Compile of fcs_check_parallel_tb.vhd was successful.
-# 4 compiles, 0 failed with no errors.
-vsim -gui work.fcs_check_parallel_tb
-# vsim -gui work.fcs_check_parallel_tb 
-# Start time: 16:15:44 on Feb 23,2026
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.fcs_check_parallel_tb(behavior)
-# Loading ieee.numeric_std(body)
-# Loading work.fcs_check_parallel(behavioral)
-add wave -position end sim:/fcs_check_parallel_tb/*
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Reg
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Counter
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Data_insert
-add wave -position end  sim:/fcs_check_parallel_tb/Comp1/Checksum_Start
-run
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_parallel_tb/Comp1
-# End time: 16:17:13 on Feb 23,2026, Elapsed time: 0:01:29
+# End time: 13:39:34 on Feb 25,2026, Elapsed time: 0:00:47
 # Errors: 0, Warnings: 4
+vsim -gui work.fcs_check_serial_tb
+# vsim -gui work.fcs_check_serial_tb 
+# Start time: 13:39:46 on Feb 25,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fcs_check_serial_tb(behavior)
+# Loading ieee.numeric_std(body)
+# Loading work.fcs_check_serial(behavioral)
+add wave -position end sim:/fcs_check_serial_tb/*
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /fcs_check_serial_tb/Comp1
+quit -sim
+# End time: 13:45:21 on Feb 25,2026, Elapsed time: 0:05:35
+# Errors: 0, Warnings: 2
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# Compile of async_fifo.vhd was successful.
+# Compile of FIFO_Write_Control.vhd was successful.
+# Compile of FIFO_Read_Control.vhd failed with 1 errors.
+# Compile of Sync.vhd failed with 1 errors.
+# 8 compiles, 2 failed with 2 errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# Compile of async_fifo.vhd was successful.
+# Compile of FIFO_Write_Control.vhd was successful.
+# Compile of FIFO_Read_Control.vhd was successful.
+# Compile of Sync.vhd failed with 1 errors.
+# 8 compiles, 1 failed with 1 error.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# Compile of async_fifo.vhd was successful.
+# Compile of FIFO_Write_Control.vhd was successful.
+# Compile of FIFO_Read_Control.vhd was successful.
+# Compile of Sync.vhd failed with 1 errors.
+# 8 compiles, 1 failed with 1 error.
+# Compile of Sync.vhd was successful.
+# Compile of Duel_Port_Memory.vhd failed with 1 errors.
+# Compile of Duel_Port_Memory.vhd was successful.
+# Compile of async_fifo.vhd was successful.
+# Compile of async_fifo.vhd failed with 1 errors.
+# Compile of async_fifo.vhd failed with 3 errors.
+# Compile of async_fifo.vhd failed with 1 errors.
+# Compile of async_fifo.vhd was successful.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# Compile of async_fifo.vhd was successful.
+# Compile of FIFO_Write_Control.vhd was successful.
+# Compile of FIFO_Read_Control.vhd was successful.
+# Compile of Sync.vhd was successful.
+# Compile of Duel_Port_Memory.vhd was successful.
+# 9 compiles, 0 failed with no errors.
+# Compile of fcs_check_serial.vhd was successful.
+# Compile of fcs_check_serial_tb.vhd was successful.
+# Compile of fcs_check_parallel.vhd was successful.
+# Compile of fcs_check_parallel_tb.vhd was successful.
+# Compile of async_fifo.vhd was successful.
+# Compile of FIFO_Write_Control.vhd was successful.
+# Compile of FIFO_Read_Control.vhd was successful.
+# Compile of Sync.vhd was successful.
+# Compile of Duel_Port_Memory.vhd was successful.
+# 9 compiles, 0 failed with no errors.

@@ -1,0 +1,56 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity async_fifo is
+    port (
+        reset          : in std_logic;
+        wclk           : in std_logic;
+        rclk           : in std_logic;
+        write_enable   : in std_logic;
+        read_enable    : in std_logic;
+        write_data_in  : in std_logic_vector(7 downto 0);
+        fifo_occu_in   : out std_logic_vector(4 downto 0);
+        fifo_occu_out  : out std_logic_vector(4 downto 0);
+        read_data_out  : out std_logic_vector(7 downto 0)
+    );
+end async_fifo;
+
+architecture behavioral of async_fifo is
+
+    -- Internal signals
+    signal w_ptr, r_ptr : unsigned(4 downto 0) := (others => '0');
+    signal w_addr, r_addr : std_logic_vector(3 downto 0);
+
+    -- Component Declaration
+    component dual_port_ram
+        PORT (
+            data      : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+            rdaddress : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+            rdclock   : IN STD_LOGIC;
+            wraddress : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+            wrclock   : IN STD_LOGIC := '1';
+            wren      : IN STD_LOGIC := '0';
+            q         : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+        );
+    end component; -- <--- THIS WAS THE MISSING PIECE
+
+begin
+
+    -- Combinational assignments
+    w_addr <= std_logic_vector(w_ptr(3 downto 0));
+    r_addr  <= std_logic_vector(r_ptr(3 downto 0));
+
+    -- RAM Instantiation
+    RAM_INST : dual_port_ram
+        port map (
+            data      => write_data_in,
+            rdaddress => r_addr,
+            rdclock   => rclk,
+            wraddress => w_addr,
+            wrclock   => wclk,
+            wren      => write_enable,
+            q         => read_data_out
+        );
+
+end behavioral;

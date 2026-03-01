@@ -44,9 +44,7 @@ for x = 1:size(Combining8,2)
     if x > 32
         break;
     end
-
     terms = {};
-
     for y = 1:size(Combining8,1)
         if Combining8(y, x) == 1
             if y > 32
