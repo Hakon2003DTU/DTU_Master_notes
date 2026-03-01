@@ -20,7 +20,7 @@
 #include "main.h"
 #include "usart.h"
 #include "gpio.h"
-#include <string.h>
+#include "string.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -62,53 +62,69 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
+  char rx_buffer[20]; // Buffer to store incoming characters
+  uint8_t rx_byte;    // Variable to store a single received byte
+  uint8_t rx_index = 0;  // renamed from "index"
 
-uint8_t Data_Re;
-char Buffer[20];
-uint8_t Index = 0;
 int main(void)
 {
+
   HAL_Init();
   SystemClock_Config();
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  HAL_UART_Receive_IT(&huart2, &Data_Re, 1);
+
   while (1)
-  {
+    {
 
-  }
-}
+        HAL_StatusTypeDef status = HAL_UART_Receive(&huart2, &rx_byte, 1, 5000);
 
+                if (status == HAL_TIMEOUT)
+                {
+                    char *timeout_msg = "TIMEOUT\r\n";
+                    HAL_UART_Transmit(&huart2, (uint8_t *)timeout_msg, strlen(timeout_msg), 100);
+                    rx_index = 0;
+                    memset(rx_buffer, 0, sizeof(rx_buffer));
+                }
+                else if (status == HAL_OK)
+                {
+                    if (rx_byte == '\r' || rx_byte == '\n')
+                        if (rx_index > 0)
+                        {
+                            rx_buffer[rx_index] = '\0';
+                            if (strcmp(rx_buffer, "LED_ON") == 0)
+                            {
+                                HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+                                char *msg_on = "LED TURNED ON\r\n";
+                                HAL_UART_Transmit(&huart2, (uint8_t *)msg_on, strlen(msg_on), 100);
+                            }
+                            else if (strcmp(rx_buffer, "LED_OFF") == 0)
+                            {
+                                HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
 
+                                char *msg_off = "LED TURNED OFF\r\n";
+                                HAL_UART_Transmit(&huart2, (uint8_t *)msg_off, strlen(msg_off), 100);
+                            }
+                            else
+                            {
+                                char *error_msg = "ERROR\r\n";
+                                HAL_UART_Transmit(&huart2, (uint8_t *)error_msg, strlen(error_msg), 100);
+                            }
 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-  if (huart->Instance == USART2)
-  {
-    if (Data_Re == '\r'){
-      Buffer[Index] = '\0'; // Close the string
-      // Corrected logic: strcmp returns 0 on success
-      if (strcmp(Buffer, "LED on") == 0){
-        HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
-      }
-      else if (strcmp(Buffer, "LED off") == 0){
-        HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
-      }
-
-      Index = 0; // Reset buffer index
+                            // Reset buffer
+                            rx_index = 0;
+                            memset(rx_buffer, 0, sizeof(rx_buffer));
+                        }
+                    }
+                    else
+                    {
+                        if (rx_index < sizeof(rx_buffer) - 1) // check if bigger then buffer
+                        {
+                            rx_buffer[rx_index++] = rx_byte;
+                        }
+                    }
+              }
     }
-    else {
-      if (Index < 19){ // Safety check: Buffer is size 20
-        Buffer[Index++] = Data_Re;
-      }
-      else {
-        Index = 0; // Avoid overflow
-      }
-    }
-    // Restart interrupt
-    HAL_UART_Receive_IT(&huart2, &Data_Re, 1);
-  }
-}
 
 
 /**
