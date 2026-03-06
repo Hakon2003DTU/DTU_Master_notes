@@ -27,8 +27,9 @@ architecture behavior of fcs_check_serial_tb is
   constant clk_period : time := 1 ns;
 
   --  Ethernet packet (FCS checksum E6 C5 3D B2)
-  constant Ethernet_packet : std_logic_vector(511 downto 0) := x"00_10_A4_7B_EA_80_00_12_34_56_78_90_08_00_45_00_00_2E_B3_FE_00_00_80_11_05_40_C0_A8_00_2C" &
-                                                   x"C0_A8_00_04_04_00_04_00_00_1A_2D_E8_00_01_02_03_04_05_06_07_08_09_0A_0B_0C_0D_0E_0F_10_11_E6_C5_3D_B2";
+  constant Ethernet_packet : std_logic_vector(511 downto 0) := x"00_10_A4_7B_EA_80_00_12_34_56_78_90_08_00_45"&
+  x"00_00_2E_B3_FE_00_00_80_11_05_40_C0_A8_00_2C" &
+   x"C0_A8_00_04_04_00_04_00_00_1A_2D_E8_00_01_02_03_04_05_06_07_08_09_0A_0B_0C_0D_0E_0F_10_11_E6_C5_3D_B2";
 
 begin
 
@@ -65,7 +66,6 @@ begin
         Test_start_of_frame <= '0';
       end if;
       Test_data_in <= Ethernet_packet(i);
-
       if i = 31 then -- goes high when 32 bits remain(FCS)
         Test_end_of_frame <= '1';
       else
@@ -74,8 +74,6 @@ begin
       wait for clk_period;
     end loop;
     Test_data_in <= '0';
-
     wait;
   end process;
-
 end;

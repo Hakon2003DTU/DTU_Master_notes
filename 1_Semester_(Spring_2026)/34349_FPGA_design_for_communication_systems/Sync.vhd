@@ -13,7 +13,7 @@ end Sync;
 architecture behavioral of Sync is
  -- Insert signals 
 begin
--- insert	
+
 
 
 
