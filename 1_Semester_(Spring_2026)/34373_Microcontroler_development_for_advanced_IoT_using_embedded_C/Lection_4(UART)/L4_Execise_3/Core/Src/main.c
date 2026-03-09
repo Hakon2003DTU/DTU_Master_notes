@@ -62,7 +62,7 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
-  char rx_buffer[20]; // Buffer to store incoming characters
+char rx_buffer[20]; // Buffer to store incoming characters
   uint8_t rx_byte;    // Variable to store a single received byte
   uint8_t rx_index = 0;  // renamed from "index"
 
@@ -76,57 +76,55 @@ int main(void)
 
   while (1)
     {
+	  HAL_StatusTypeDef status = HAL_UART_Receive(&huart2, &rx_byte, 1, 5000);
 
-        HAL_StatusTypeDef status = HAL_UART_Receive(&huart2, &rx_byte, 1, 5000);
+	          if (status == HAL_TIMEOUT)
+	          {
+	              char *timeout_msg = "TIMEOUT\r\n";
+	              HAL_UART_Transmit(&huart2, (uint8_t *)timeout_msg, strlen(timeout_msg), 100);
+	              rx_index = 0;
+	              memset(rx_buffer, 0, sizeof(rx_buffer));
+	          }
+	          else if (status == HAL_OK)
+	          {
+	              if (rx_byte == '\r' || rx_byte == '\n')
+	              {   // <--- ADD THIS OPENING BRACE
+	                  if (rx_index > 0)
+	                  {
+	                      rx_buffer[rx_index] = '\0';
+	                      if (strcmp(rx_buffer, "LED_ON") == 0)
+	                      {
+	                          HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+	                          char *msg_on = "LED TURNED ON\r\n";
+	                          HAL_UART_Transmit(&huart2, (uint8_t *)msg_on, strlen(msg_on), 100);
+	                      }
+	                      else if (strcmp(rx_buffer, "LED_OFF") == 0)
+	                      {
+	                          HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+	                          char *msg_off = "LED TURNED OFF\r\n";
+	                          HAL_UART_Transmit(&huart2, (uint8_t *)msg_off, strlen(msg_off), 100);
+	                      }
+	                      else
+	                      {
+	                          char *error_msg = "ERROR\r\n";
+	                          HAL_UART_Transmit(&huart2, (uint8_t *)error_msg, strlen(error_msg), 100);
+	                      }
 
-                if (status == HAL_TIMEOUT)
-                {
-                    char *timeout_msg = "TIMEOUT\r\n";
-                    HAL_UART_Transmit(&huart2, (uint8_t *)timeout_msg, strlen(timeout_msg), 100);
-                    rx_index = 0;
-                    memset(rx_buffer, 0, sizeof(rx_buffer));
-                }
-                else if (status == HAL_OK)
-                {
-                    if (rx_byte == '\r' || rx_byte == '\n')
-                        if (rx_index > 0)
-                        {
-                            rx_buffer[rx_index] = '\0';
-                            if (strcmp(rx_buffer, "LED_ON") == 0)
-                            {
-                                HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
-                                char *msg_on = "LED TURNED ON\r\n";
-                                HAL_UART_Transmit(&huart2, (uint8_t *)msg_on, strlen(msg_on), 100);
-                            }
-                            else if (strcmp(rx_buffer, "LED_OFF") == 0)
-                            {
-                                HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
-
-                                char *msg_off = "LED TURNED OFF\r\n";
-                                HAL_UART_Transmit(&huart2, (uint8_t *)msg_off, strlen(msg_off), 100);
-                            }
-                            else
-                            {
-                                char *error_msg = "ERROR\r\n";
-                                HAL_UART_Transmit(&huart2, (uint8_t *)error_msg, strlen(error_msg), 100);
-                            }
-
-                            // Reset buffer
-                            rx_index = 0;
-                            memset(rx_buffer, 0, sizeof(rx_buffer));
-                        }
-                    }
-                    else
-                    {
-                        if (rx_index < sizeof(rx_buffer) - 1) // check if bigger then buffer
-                        {
-                            rx_buffer[rx_index++] = rx_byte;
-                        }
-                    }
+	                      // Reset buffer
+	                      rx_index = 0;
+	                      memset(rx_buffer, 0, sizeof(rx_buffer));
+	                  }
+	              }   // <--- THIS CLOSING BRACE NOW MATCHES
+	              else
+	              {
+	                  if (rx_index < sizeof(rx_buffer) - 1) // check if bigger then buffer
+	                  {
+	                      rx_buffer[rx_index++] = rx_byte;
+	                  }
+	              }
+	          }
               }
     }
-
-
 /**
   * @brief System Clock Configuration
   * @retval None

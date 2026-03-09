@@ -26,17 +26,8 @@
 
 I2C_HandleTypeDef hi2c2;
 
-/* I2C2 init function */
 void MX_I2C2_Init(void)
 {
-
-  /* USER CODE BEGIN I2C2_Init 0 */
-
-  /* USER CODE END I2C2_Init 0 */
-
-  /* USER CODE BEGIN I2C2_Init 1 */
-
-  /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
   hi2c2.Init.Timing = 0x0010020A;
   hi2c2.Init.OwnAddress1 = 0;
@@ -50,24 +41,14 @@ void MX_I2C2_Init(void)
   {
     Error_Handler();
   }
-
-  /** Configure Analogue filter
-  */
   if (HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
   {
     Error_Handler();
   }
-
-  /** Configure Digital filter
-  */
   if (HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN I2C2_Init 2 */
-
-  /* USER CODE END I2C2_Init 2 */
-
 }
 
 void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle)

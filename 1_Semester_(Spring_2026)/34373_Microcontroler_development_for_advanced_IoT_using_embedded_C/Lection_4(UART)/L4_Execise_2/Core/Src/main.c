@@ -90,9 +90,13 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
       // Corrected logic: strcmp returns 0 on success
       if (strcmp(Buffer, "LED on") == 0){
         HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+        char *msg = "LED on\r\n";
+        HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 100);
       }
       else if (strcmp(Buffer, "LED off") == 0){
         HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+        char *msg = "LED off\r\n";
+        HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 100);
       }
 
       Index = 0; // Reset buffer index
