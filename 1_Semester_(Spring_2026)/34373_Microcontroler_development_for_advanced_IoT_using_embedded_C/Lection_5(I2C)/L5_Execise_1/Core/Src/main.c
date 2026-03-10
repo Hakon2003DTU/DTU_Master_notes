@@ -22,60 +22,52 @@
 #include "usart.h"
 #include "gpio.h"
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
+#include <string.h>
+#include <stdio.h>
 
-/* USER CODE END Includes */
+static const uint8_t TMP102_ADDR = 0x48 << 1; // Use 8-bit address
+static const uint8_t REG_TEMP = 0x00;
 
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-/* USER CODE BEGIN PFP */
 
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
 int main(void)
 {
+	  HAL_StatusTypeDef ret;
+	  uint8_t buf[20];
+	  int8_t val;
+	  //float temp_c;
+
   HAL_Init();
   SystemClock_Config();
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_I2C2_Init();
 
+  char *test_msg = "\r\n\r\n=== UART IS WORKING ===\r\n\r\n";
+  HAL_UART_Transmit(&huart2, (uint8_t*)test_msg, strlen(test_msg), 100);
+
   while (1)
   {
+	  // Tell TMP102 that we want to read from the temperature register
+	  buf[0] = REG_TEMP;
+	        ret = HAL_I2C_Master_Transmit(&hi2c2, TMP102_ADDR, buf, 1, 100);
+	        if ( ret != HAL_OK ) {
+	          strcpy((char*)buf, "Error Tx\r\n");
+	        } else {
+	          ret = HAL_I2C_Master_Receive(&hi2c2, TMP102_ADDR, buf, 1, 100);
+	          if ( ret != HAL_OK ) {
+	            strcpy((char*)buf, "Error Rx\r\n");
+	          } else {
+	            val = (int8_t)buf[0];
+	            sprintf((char*)buf, "%d C\r\n", val);
+	          }
+	        }
 
+	        // Send out buffer (temperature or error message)
+	        HAL_UART_Transmit(&huart2, buf, strlen((char*)buf), HAL_MAX_DELAY);
 
-
+	        // Wait
+	        HAL_Delay(500);
   }
 }
 

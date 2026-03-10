@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  0001b613  00000000  00000000  00014d3b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000eb09  00000000  00000000  0003034e  2**0
+ 17 .debug_line   0000eb06  00000000  00000000  0003034e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0009d368  00000000  00000000  0003ee57  2**0
+ 18 .debug_str    0009d368  00000000  00000000  0003ee54  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000dc1bf  2**0
+ 19 .comment      00000043  00000000  00000000  000dc1bc  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002b68  00000000  00000000  000dc204  2**2
+ 20 .debug_frame  00002b68  00000000  00000000  000dc200  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 000000df  00000000  00000000  000ded6c  2**0
+ 21 .debug_line_str 000000df  00000000  00000000  000ded68  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -203,24 +203,19 @@ void MX_GPIO_Init(void)
  80002dc:	40021000 	.word	0x40021000
 
 080002e0 <MX_I2C2_Init>:
+/* USER CODE END 0 */
 
 I2C_HandleTypeDef hi2c2;
 
-/* I2C2 init function */
 void MX_I2C2_Init(void)
 {
  80002e0:	b580      	push	{r7, lr}
  80002e2:	af00      	add	r7, sp, #0
-  /* USER CODE END I2C2_Init 0 */
-
-  /* USER CODE BEGIN I2C2_Init 1 */
-
-  /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
  80002e4:	4b1b      	ldr	r3, [pc, #108]	@ (8000354 <MX_I2C2_Init+0x74>)
  80002e6:	4a1c      	ldr	r2, [pc, #112]	@ (8000358 <MX_I2C2_Init+0x78>)
  80002e8:	601a      	str	r2, [r3, #0]
-  hi2c2.Init.Timing = 0x00201D2B;
+  hi2c2.Init.Timing = 0x0010020A;
  80002ea:	4b1a      	ldr	r3, [pc, #104]	@ (8000354 <MX_I2C2_Init+0x74>)
  80002ec:	4a1b      	ldr	r2, [pc, #108]	@ (800035c <MX_I2C2_Init+0x7c>)
  80002ee:	605a      	str	r2, [r3, #4]
@@ -262,9 +257,6 @@ void MX_I2C2_Init(void)
     Error_Handler();
  8000326:	f000 f925 	bl	8000574 <Error_Handler>
   }
-
-  /** Configure Analogue filter
-  */
   if (HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
  800032a:	2100      	movs	r1, #0
  800032c:	4809      	ldr	r0, [pc, #36]	@ (8000354 <MX_I2C2_Init+0x74>)
@@ -276,9 +268,6 @@ void MX_I2C2_Init(void)
     Error_Handler();
  8000338:	f000 f91c 	bl	8000574 <Error_Handler>
   }
-
-  /** Configure Digital filter
-  */
   if (HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0) != HAL_OK)
  800033c:	2100      	movs	r1, #0
  800033e:	4805      	ldr	r0, [pc, #20]	@ (8000354 <MX_I2C2_Init+0x74>)
@@ -290,17 +279,13 @@ void MX_I2C2_Init(void)
     Error_Handler();
  800034a:	f000 f913 	bl	8000574 <Error_Handler>
   }
-  /* USER CODE BEGIN I2C2_Init 2 */
-
-  /* USER CODE END I2C2_Init 2 */
-
 }
  800034e:	bf00      	nop
  8000350:	bd80      	pop	{r7, pc}
  8000352:	bf00      	nop
  8000354:	20000078 	.word	0x20000078
  8000358:	40005800 	.word	0x40005800
- 800035c:	00201d2b 	.word	0x00201d2b
+ 800035c:	0010020a 	.word	0x0010020a
 
 08000360 <HAL_I2C_MspInit>:
 
@@ -437,7 +422,7 @@ int main(void)
  800041a:	2300      	movs	r3, #0
  800041c:	713b      	strb	r3, [r7, #4]
 	        ret = HAL_I2C_Master_Transmit(&hi2c2, TMP102_ADDR, buf, 1, 100);
- 800041e:	2392      	movs	r3, #146	@ 0x92
+ 800041e:	2390      	movs	r3, #144	@ 0x90
  8000420:	4619      	mov	r1, r3
  8000422:	1d3a      	adds	r2, r7, #4
  8000424:	2364      	movs	r3, #100	@ 0x64
@@ -463,7 +448,7 @@ int main(void)
  800044a:	e01f      	b.n	800048c <main+0xa4>
 	        } else {
 	          ret = HAL_I2C_Master_Receive(&hi2c2, TMP102_ADDR, buf, 1, 100);
- 800044c:	2392      	movs	r3, #146	@ 0x92
+ 800044c:	2390      	movs	r3, #144	@ 0x90
  800044e:	4619      	mov	r1, r3
  8000450:	1d3a      	adds	r2, r7, #4
  8000452:	2364      	movs	r3, #100	@ 0x64

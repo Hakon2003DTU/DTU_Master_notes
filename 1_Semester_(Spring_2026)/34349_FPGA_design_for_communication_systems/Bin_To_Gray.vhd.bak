@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Bin_To_Gray is
+port (
+B : in std_logic_vector(3 downto 0);
+G : out std_logic_vector(3 downto 0)
+);
+end Bin_To_Gray;
+
+architecture behavioral of Bin_To_Gray is
+begin
+G(0)= B(0) xor B(1);
+G(1)= B(1) xor B(2);
+G(2)= B(2) xor B(3);
+G(3)=B(3)
+end behavioral;
+
+
+
+
+
+
+
