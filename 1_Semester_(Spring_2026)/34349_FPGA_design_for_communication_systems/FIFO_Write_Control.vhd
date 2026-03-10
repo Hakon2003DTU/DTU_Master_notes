@@ -7,19 +7,52 @@ port (
 reset : in std_logic;
 wclk : in std_logic;
 write_enable : in std_logic;
-write_data_in : in std_logic_vector(7 downto 0);
+R_Sync : in std_logic_vector(3 downto 0);
 full : out std_logic;
 wen : out std_logic;
-fifo_occu_in : out std_logic_vector(4 downto 0);
-waddr: out std_logic_vector(4 downto 0);
-wptr: out std_logic_vector(4 downto 0)
+fifo_occu_in : out std_logic_vector(3 downto 0);
+waddr: out std_logic_vector(3 downto 0);
+wptr: out std_logic_vector(3 downto 0)
 );
-end FIFO_Write_Control;--finished
+end FIFO_Write_Control;
 
 architecture behavioral of FIFO_Write_Control is
  -- Insert signals 
+signal Writepointer : std_logic_vector(4 downto 0);
+
+
+
 begin
 -- insert	
+
+
+
+	process(wclk,reset)
+	begin
+		if (reset = '1') then
+			full	    <='0';
+			wen	    <='0';
+			fifo_occu_in<=X"0";
+			waddr	    <=X"0";
+			wptr 	    <=X"0";
+
+		elsif rising_edge(wclk) then
+
+
+			-- Defining when the the system is full 
+			if (wptr(4) /= rptr_sync(4)) and (wptr(3 downto 0) = rptr_sync(3 downto 0)) then 
+				full <= '1'; 
+			else 
+				full <='0';
+			end if;
+		fifo_occu_in <= R_Sync - Writepointer;
+		wptr <= Writepointer;
+		end if;
+	end process
+
+
+
+
 
 
 end behavioral;
