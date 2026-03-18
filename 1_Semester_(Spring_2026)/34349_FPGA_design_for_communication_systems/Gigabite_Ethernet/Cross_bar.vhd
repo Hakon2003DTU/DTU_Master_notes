@@ -1,0 +1,57 @@
+
+
+
+---------------------------------------------------------------------
+-- Componant:   Cross_Bar 
+-- Description: It task is to take in data and redirekt it to the
+--	        desired output depending oh the scheduler 
+-- Changes	:
+--  		HH 18/3 creation of document and I/O
+---------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Cross_Bar is
+    port (
+	--Input
+        Reset         : in std_logic;
+	Control	      : in std_logic_vector(7 downto 0);-- size unknown
+        Input1        : in std_logic_vector(7 downto 0);
+	Input2        : in std_logic_vector(7 downto 0);
+	Input3        : in std_logic_vector(7 downto 0);
+	Input4        : in std_logic_vector(7 downto 0);
+		
+	--Output
+	Output1       : out std_logic_vector(7 downto 0);
+	Output2       : out std_logic_vector(7 downto 0);
+	Output3       : out std_logic_vector(7 downto 0);
+	Output4       : out std_logic_vector(7 downto 0)
+	);
+end Cross_Bar;
+
+architecture behavioral of Top_Layer is
+-- Signal & Component Declaration
+
+
+
+
+Begin
+
+
+
+
+
+
+
+
+
+end behavioral;
+
+
+
+
+
+

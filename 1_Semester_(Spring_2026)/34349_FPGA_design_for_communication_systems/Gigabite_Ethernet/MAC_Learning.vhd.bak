@@ -1,0 +1,49 @@
+
+
+
+---------------------------------------------------------------------
+-- Componant:   MAC_Learning 
+-- Description: It task is to take in data and redirekt it to the
+--	        desired output depending oh the scheduler 
+-- Changes	:
+--  		HH 18/3 creation of document and I/O
+---------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity MAC_Learning is
+    port (
+	--Input
+        EN            : in std_logic;
+	Dst_MAC	      : in std_logic_vector(47 downto 0);
+        Src_MAC       : in std_logic_vector(47 downto 0);		
+	--Output
+	Done          : out std_logic;
+	Dst_Port      : out std_logic_vector(47 downto 0)
+	);
+end MAC_Learning;
+
+architecture behavioral of MAC_Learning is
+-- Signal & Component Declaration
+
+
+Begin
+
+
+
+
+
+
+
+
+
+end behavioral;
+
+
+
+
+
+
