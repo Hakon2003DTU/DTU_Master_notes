@@ -12,14 +12,14 @@ architecture behavior of tb_Gray_To_Bin is
   -- Component used in testbench
   component Gray_To_Bin
     port(
-         G : in  std_logic_vector(3 downto 0);
-         B : out std_logic_vector(3 downto 0)
+         G : in  std_logic_vector(4 downto 0);
+         B : out std_logic_vector(4 downto 0)
          );
   end component;
 
   -- Signals to connect to the component under test
-  signal Test_B : std_logic_vector(3 downto 0) := x"0";
-  signal Test_G : std_logic_vector(3 downto 0) := x"0";
+  signal Test_B : std_logic_vector(4 downto 0) := "00000";
+  signal Test_G : std_logic_vector(4 downto 0) := "00000";
 
 begin
 
@@ -32,22 +32,38 @@ begin
   -- Simulation Process
   Sim : process
   begin
-    Test_G <= "0000"; wait for 1 ns;
-    Test_G <= "0001"; wait for 1 ns;
-    Test_G <= "0011"; wait for 1 ns;
-    Test_G <= "0010"; wait for 1 ns;
-    Test_G <= "0110"; wait for 1 ns;		
-    Test_G <= "0111"; wait for 1 ns;	
-    Test_G <= "0101"; wait for 1 ns;  
-    Test_G <= "0100"; wait for 1 ns;
-    Test_G <= "1100"; wait for 1 ns;
-    Test_G <= "1101"; wait for 1 ns;
-    Test_G <= "1111"; wait for 1 ns;
-    Test_G <= "1110"; wait for 1 ns;
-    Test_G <= "1010"; wait for 1 ns;
-    Test_G <= "1011"; wait for 1 ns;
-    Test_G <= "1001"; wait for 1 ns;
-    Test_G <= "1000"; wait for 1 ns;
+Test_G <= "00000"; wait for 1 ns;
+Test_G <= "00001"; wait for 1 ns;
+Test_G <= "00011"; wait for 1 ns;
+Test_G <= "00010"; wait for 1 ns;
+Test_G <= "00110"; wait for 1 ns;
+Test_G <= "00111"; wait for 1 ns;
+Test_G <= "00101"; wait for 1 ns;
+Test_G <= "00100"; wait for 1 ns;
+Test_G <= "01100"; wait for 1 ns;
+Test_G <= "01101"; wait for 1 ns;
+Test_G <= "01111"; wait for 1 ns;
+Test_G <= "01110"; wait for 1 ns;
+Test_G <= "01010"; wait for 1 ns;
+Test_G <= "01011"; wait for 1 ns;
+Test_G <= "01001"; wait for 1 ns;
+Test_G <= "01000"; wait for 1 ns;
+Test_G <= "11000"; wait for 1 ns;
+Test_G <= "11001"; wait for 1 ns;
+Test_G <= "11011"; wait for 1 ns;
+Test_G <= "11010"; wait for 1 ns;
+Test_G <= "11110"; wait for 1 ns;
+Test_G <= "11111"; wait for 1 ns;
+Test_G <= "11101"; wait for 1 ns;
+Test_G <= "11100"; wait for 1 ns;
+Test_G <= "10100"; wait for 1 ns;
+Test_G <= "10101"; wait for 1 ns;
+Test_G <= "10111"; wait for 1 ns;
+Test_G <= "10110"; wait for 1 ns;
+Test_G <= "10010"; wait for 1 ns;
+Test_G <= "10011"; wait for 1 ns;
+Test_G <= "10001"; wait for 1 ns;
+Test_G <= "10000"; wait for 1 ns;
     wait; -- Stop the simulation
   end process;
 

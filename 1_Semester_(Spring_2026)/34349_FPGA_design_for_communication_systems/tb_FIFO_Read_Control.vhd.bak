@@ -1,0 +1,81 @@
+
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb_FIFO_Read_Control is
+end tb_FIFO_Read_Control;
+
+architecture behavior of tb_FIFO_Read_Control is
+  component FIFO_Read_Control
+    port (
+        Reset         : in std_logic;
+        Rclk          : in std_logic;
+        Read_enable   : in std_logic;
+        W_sync        : in std_logic_vector(4 downto 0);
+        Empty         : out std_logic;
+        Ren           : out std_logic;
+        Fifo_occu_out : out std_logic_vector(4 downto 0);
+        Raddr         : out std_logic_vector(3 downto 0);
+        Rptr          : out std_logic_vector(4 downto 0)
+    );
+  end component;
+
+  signal Test_Reset        : std_logic := '0';
+  signal Test_Rclk         : std_logic := '0';
+  signal Test_Read_Enable : std_logic := '0';
+  signal Test_W_Sync       : std_logic_vector(4 downto 0) := "00000";
+  signal Test_Empty         : std_logic;
+  signal Test_Ren          : std_logic;
+  signal Test_Fifo_occu_out : std_logic_vector(4 downto 0);
+  signal Test_Raddr        : std_logic_vector(3 downto 0);
+  signal Test_Rptr         : std_logic_vector(4 downto 0);
+
+  constant Wclk_period_1 : time := 1 ns;
+
+begin
+  Comp1 : FIFO_Write_Control port map (
+        Reset        => Test_Reset,
+        Rclk         => Test_Rclk,
+        Read_Enable  => Test_Read_Enable,
+        W_Sync       => Test_W_Sync,
+        Empty        => Test_Empty,
+        Ren          => Test_Ren,
+        Fifo_occu_out=> Test_Fifo_occu_out,
+        Raddr        => Test_Raddr,
+        Rptr         => Test_Rptr
+  );
+
+  RClk_Generator : process
+  begin
+    Test_Rclk <= '0';
+    wait for Wclk_period_1 / 2;
+    Test_Rclk <= '1';
+    wait for Wclk_period_1 / 2;
+  end process;
+
+  Data_Sim : process
+  begin
+    Test_Reset        <= '1';
+    Test_Read_Enable <= '0';
+    Test_W_Sync       <= "00000";
+    wait for 5 ns;
+    
+    Test_Reset        <= '0';
+    Test_Read_Enable <= '1'; 
+    wait for Wclk_period_1;
+    wait for Wclk_period_1;
+    
+    Test_W_Sync       <= "00001";
+    wait;
+  end process;
+end behavior;
+
+
+
+
+
+
+
+

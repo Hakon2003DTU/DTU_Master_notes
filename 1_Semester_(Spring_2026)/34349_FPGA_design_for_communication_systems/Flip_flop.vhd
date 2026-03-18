@@ -7,9 +7,9 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Flip_flop is
 port (
-    Input : in std_logic_vector(3 downto 0);
+    Input : in std_logic_vector(4 downto 0);
     clk : in std_logic;
-    Output : out std_logic_vector(3 downto 0)
+    Output : out std_logic_vector(4 downto 0)
 );
 end Flip_flop;
 

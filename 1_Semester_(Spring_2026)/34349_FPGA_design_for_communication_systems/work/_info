@@ -10,25 +10,25 @@ z2
 cModel Technology
 dC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/testbench
 Easync_fifo
-Z0 w1772029519
+Z0 w1773257373
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 320
+!i122 826
 Z4 dC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems
-Z5 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/async_fifo.vhd
-Z6 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/async_fifo.vhd
+Z5 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\async_fifo.vhd
+Z6 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\async_fifo.vhd
 l0
 L5 1
-VMLPm_b36=3=X`:Zl3@`Tf0
-!s100 >]<M]2J?jiBdD>JCjJ^QC3
+VcYZiJ=C7zP^IDZA7<;AEb3
+!s100 b@Ei0kJ9o]OzhfX`YCeg=0
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1773089900
+Z8 !s110 1773257379
 !i10b 1
-Z9 !s108 1773089900.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/async_fifo.vhd|
-Z11 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/async_fifo.vhd|
+Z9 !s108 1773257379.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\async_fifo.vhd|
+Z11 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\async_fifo.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
@@ -36,12 +36,12 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 10 async_fifo 0 22 MLPm_b36=3=X`:Zl3@`Tf0
-!i122 320
-l38
-L19 38
-VK]c0O<0_=Y:Hl[FHcNUC93
-!s100 3f7AORG=<5``dXh1ZzWCY3
+Z14 DEx4 work 10 async_fifo 0 22 cYZiJ=C7zP^IDZA7<;AEb3
+!i122 826
+l85
+Z15 L21 126
+Vo90nIZnDz<nJ7Z>lehggK3
+!s100 Nf__>RDJnSGfFOnL_AJhJ2
 R7
 32
 R8
@@ -53,25 +53,25 @@ R11
 R12
 R13
 Ebin_to_gray
-Z14 w1773067098
+Z16 w1773159954
 R1
 R2
 R3
-!i122 324
+!i122 814
 R4
-Z15 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Bin_To_Gray.vhd
-Z16 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Bin_To_Gray.vhd
+Z17 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Bin_To_Gray.vhd
+Z18 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Bin_To_Gray.vhd
 l0
 L5 1
-VaZilYLUE7Qmo_2:D37Tdd2
-!s100 Kkng]ZBihlG2dl1c99_o^2
+VZa8N?e8gJaIARdmGhlnN>2
+!s100 OQgePRcJ]@TA@UeKZnz:>1
 R7
 32
-Z17 !s110 1773089901
+Z19 !s110 1773257243
 !i10b 1
-Z18 !s108 1773089901.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Bin_To_Gray.vhd|
-Z20 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Bin_To_Gray.vhd|
+Z20 !s108 1773257242.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Bin_To_Gray.vhd|
+Z22 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Bin_To_Gray.vhd|
 !i113 1
 R12
 R13
@@ -79,85 +79,85 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 11 bin_to_gray 0 22 aZilYLUE7Qmo_2:D37Tdd2
-!i122 324
+DEx4 work 11 bin_to_gray 0 22 Za8N?e8gJaIARdmGhlnN>2
+!i122 814
 l13
-L12 7
-VUXb;Bo18HTFP@NC_Bd1:]3
-!s100 `4@2b3QR2z3B9KADH]O<G2
+L12 8
+VVelhT1niB85Q@PWezUH^M3
+!s100 2FmC6MOB^5]FH71YM`<oh0
 R7
 32
-R17
-!i10b 1
-R18
 R19
+!i10b 1
 R20
+R21
+R22
 !i113 1
 R12
 R13
 Eduel_port_memory
-Z21 w1772809297
-Z22 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+Z23 w1772809297
+Z24 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
 R2
 R3
-!i122 323
+!i122 813
 R4
-Z23 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Duel_Port_Memory.vhd
-Z24 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Duel_Port_Memory.vhd
+Z25 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Duel_Port_Memory.vhd
+Z26 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Duel_Port_Memory.vhd
 l0
 L43 1
 VJ:^@lLU2C6j?6AQNj9HnC0
 !s100 OOPOPVP@C221K]SQLQjRI3
 R7
 32
-R17
+Z27 !s110 1773257242
 !i10b 1
-R18
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Duel_Port_Memory.vhd|
-Z26 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Duel_Port_Memory.vhd|
+R20
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Duel_Port_Memory.vhd|
+Z29 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Duel_Port_Memory.vhd|
 !i113 1
 R12
 R13
 Asyn
-R22
+R24
 R2
 R3
 DEx4 work 16 duel_port_memory 0 22 J:^@lLU2C6j?6AQNj9HnC0
-!i122 323
+!i122 813
 l62
 L58 43
 VNYV40XV9@Ro8mY?Q2G5OG3
 !s100 lVNOzh<]h:]NHA1_T1A1m2
 R7
 32
-R17
+R27
 !i10b 1
-R18
-R25
-R26
+R20
+R28
+R29
 !i113 1
 R12
 R13
 Efcs_check_parallel
-Z27 w1771860041
+Z30 w1771860041
 R1
 R2
 R3
-!i122 318
+!i122 809
 R4
-Z28 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel.vhd
-Z29 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel.vhd
+Z31 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel.vhd
+Z32 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel.vhd
 l0
 L5 1
 VM_73Z^0`H;kUCBYMgm3W@3
 !s100 1b3NiGB=J0S[egDoSacd71
 R7
 32
-R8
+Z33 !s110 1773257241
 !i10b 1
-R9
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel.vhd|
-Z31 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel.vhd|
+Z34 !s108 1773257240.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel.vhd|
+Z36 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel.vhd|
 !i113 1
 R12
 R13
@@ -166,40 +166,40 @@ R1
 R2
 R3
 DEx4 work 18 fcs_check_parallel 0 22 M_73Z^0`H;kUCBYMgm3W@3
-!i122 318
+!i122 809
 l21
-Z32 L15 81
+Z37 L15 81
 V[c3]IGI@QV_1X0GmWBnWN0
 !s100 ^2TFIRb9zS58SG8jh8R:31
 R7
 32
-R8
+R33
 !i10b 1
-R9
-R30
-R31
+R34
+R35
+R36
 !i113 1
 R12
 R13
 Efcs_check_parallel_tb
-Z33 w1771585758
+Z38 w1771585758
 R2
 R3
-!i122 319
+!i122 810
 R4
-Z34 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel_tb.vhd
-Z35 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel_tb.vhd
+Z39 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel_tb.vhd
+Z40 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel_tb.vhd
 l0
 L7 1
 VWK>M2V<Jk6VWdb?7T3P=V3
 !s100 e?N=O_AB]zO4zFI<FekjR2
 R7
 32
-R8
+R33
 !i10b 1
-R9
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel_tb.vhd|
-Z37 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel_tb.vhd|
+Z41 !s108 1773257241.000000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel_tb.vhd|
+Z43 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_parallel_tb.vhd|
 !i113 1
 R12
 R13
@@ -207,41 +207,41 @@ Abehavior
 R2
 R3
 DEx4 work 21 fcs_check_parallel_tb 0 22 WK>M2V<Jk6VWdb?7T3P=V3
-!i122 319
+!i122 810
 l36
 L10 77
 V3LS4A=SaIcYg[HBHk]9NL1
 !s100 LDamAC9OOIeXGYRNVzN=E1
 R7
 32
-R8
+R33
 !i10b 1
-R9
-R36
-R37
+R41
+R42
+R43
 !i113 1
 R12
 R13
 Efcs_check_serial
-Z38 w1772558656
+Z44 w1772558656
 R1
 R2
 R3
-!i122 316
+!i122 807
 R4
-Z39 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd
-Z40 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd
+Z45 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd
+Z46 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd
 l0
 L5 1
 V>]OT1@G?S=9cfz;_M:KTk1
 !s100 D9XBmhSknHaF9TG0Hjg0g1
 R7
 32
-R8
+Z47 !s110 1773257240
 !i10b 1
-R9
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd|
-Z42 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd|
+R34
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd|
+Z49 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial.vhd|
 !i113 1
 R12
 R13
@@ -250,40 +250,40 @@ R1
 R2
 R3
 DEx4 work 16 fcs_check_serial 0 22 >]OT1@G?S=9cfz;_M:KTk1
-!i122 316
+!i122 807
 l21
-R32
+R37
 VhFZzlk=EAd?KMCInOfLI73
 !s100 :_USK>k_Y@eQIlok_ll;f1
 R7
 32
-R8
+R47
 !i10b 1
-R9
-R41
-R42
+R34
+R48
+R49
 !i113 1
 R12
 R13
 Efcs_check_serial_tb
-Z43 w1772809308
+Z50 w1772809308
 R2
 R3
-!i122 317
+!i122 808
 R4
-Z44 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd
-Z45 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd
+Z51 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd
+Z52 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd
 l0
 L4 1
 VQIA>:Z11]XRbcHeP40?[_1
 !s100 g2K:4RjoB;6>NZOZ;A:I^1
 R7
 32
-R8
+R47
 !i10b 1
-R9
-Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd|
-Z47 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd|
+R34
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd|
+Z54 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/fcs_check_serial_tb.vhd|
 !i113 1
 R12
 R13
@@ -291,18 +291,18 @@ Abehavior
 R2
 R3
 DEx4 work 19 fcs_check_serial_tb 0 22 QIA>:Z11]XRbcHeP40?[_1
-!i122 317
+!i122 808
 l34
 L7 73
 V>hAl=afW?G>?@L^Qak7V`3
 !s100 X4]kz_FVgOhEPGjd5n>F23
 R7
 32
-R8
-!i10b 1
-R9
-R46
 R47
+!i10b 1
+R34
+R53
+R54
 !i113 1
 R12
 R13
@@ -320,32 +320,32 @@ R7
 !s110 1771440443
 !i10b 1
 !s108 1771440443.000000
-R46
-R47
+R53
+R54
 !i113 1
 R12
 R13
 w1771440091
 Efifo_read_control
-Z48 w1772024008
+Z55 w1773218014
 R1
 R2
 R3
-!i122 322
+!i122 812
 R4
-Z49 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/FIFO_Read_Control.vhd
-Z50 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/FIFO_Read_Control.vhd
+Z56 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\FIFO_Read_Control.vhd
+Z57 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\FIFO_Read_Control.vhd
 l0
 L5 1
-VW2mVj_Bb;anK<if?=CAe@2
-!s100 41c8RjU?3SC?6M4Kh@I6O0
+VK6b9=nRa18nGE0`ZMHefY2
+!s100 1G[jkiYGRdK]D?2g^e_kl2
 R7
 32
-R17
+R27
 !i10b 1
-R18
-Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/FIFO_Read_Control.vhd|
-Z52 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/FIFO_Read_Control.vhd|
+R20
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\FIFO_Read_Control.vhd|
+Z59 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\FIFO_Read_Control.vhd|
 !i113 1
 R12
 R13
@@ -353,42 +353,42 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 17 fifo_read_control 0 22 W2mVj_Bb;anK<if?=CAe@2
-!i122 322
-l21
-Z53 L19 7
-VKAFiG@L821]BI33XI9LCe2
-!s100 dOaV:[j2kgEad3WN;UdZ=1
+DEx4 work 17 fifo_read_control 0 22 K6b9=nRa18nGE0`ZMHefY2
+!i122 812
+l23
+L19 45
+V4Y]FG`jEg`E;4AKj6QLeh1
+!s100 JZLRAJ`BLlN=8SPjgZnP=3
 R7
 32
-R17
+R27
 !i10b 1
-R18
-R51
-R52
+R20
+R58
+R59
 !i113 1
 R12
 R13
 Efifo_write_control
-Z54 w1772105916
+Z60 w1773184565
 R1
 R2
 R3
-!i122 321
+!i122 822
 R4
-Z55 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/FIFO_Write_Control.vhd
-Z56 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/FIFO_Write_Control.vhd
+Z61 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\FIFO_Write_Control.vhd
+Z62 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\FIFO_Write_Control.vhd
 l0
 L5 1
-VK2<fbAVG?2?4PzFZneb_E0
-!s100 Xk3KmVSm8I9iO_OW2zFRa2
+V_aENz7Mkd;LzT1U9n9zfh3
+!s100 GN?:cB8^O83@iL9YWDdHL1
 R7
 32
-R17
+Z63 !s110 1773257246
 !i10b 1
-R18
-Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/FIFO_Write_Control.vhd|
-Z58 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/FIFO_Write_Control.vhd|
+Z64 !s108 1773257245.000000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\FIFO_Write_Control.vhd|
+Z66 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\FIFO_Write_Control.vhd|
 !i113 1
 R12
 R13
@@ -396,42 +396,42 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 18 fifo_write_control 0 22 K2<fbAVG?2?4PzFZneb_E0
-!i122 321
-l21
-R53
-V9R;dDN9=6`ZVlANHz9KiV2
-!s100 EMZAT>PWN_gZ1XAa;Q=1]2
+DEx4 work 18 fifo_write_control 0 22 _aENz7Mkd;LzT1U9n9zfh3
+!i122 822
+l22
+L19 52
+VJ20>ZSW1[X3j>h_j>RTGd2
+!s100 kj4GIhI4dU]gW^H1<<K?@2
 R7
 32
-R17
+R63
 !i10b 1
-R18
-R57
-R58
+R64
+R65
+R66
 !i113 1
 R12
 R13
 Eflip_flop
-Z59 w1773086823
+Z67 w1773159956
 R1
 R2
 R3
-!i122 328
+!i122 818
 R4
-Z60 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Flip_flop.vhd
-Z61 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Flip_flop.vhd
+Z68 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Flip_flop.vhd
+Z69 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Flip_flop.vhd
 l0
 L8 1
-V60LGzkoSW9[I2b7fY_ndY1
-!s100 U>FT[<dE6OOjAaQ3kbhF=2
+VFLb`NzZ0@S_41ig5f9=i:2
+!s100 077H_zY19JQQ8If57;n>z0
 R7
 32
-Z62 !s110 1773089902
+Z70 !s110 1773257244
 !i10b 1
-Z63 !s108 1773089902.000000
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Flip_flop.vhd|
-Z65 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Flip_flop.vhd|
+Z71 !s108 1773257244.000000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Flip_flop.vhd|
+Z73 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Flip_flop.vhd|
 !i113 1
 R12
 R13
@@ -439,42 +439,42 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 9 flip_flop 0 22 60LGzkoSW9[I2b7fY_ndY1
-!i122 328
+DEx4 work 9 flip_flop 0 22 FLb`NzZ0@S_41ig5f9=i:2
+!i122 818
 l17
 L16 12
 V^<1DdPh`5O9cm>iJ:C[cF2
 !s100 3XdbI0>6=;=GiD7gD^ld_1
 R7
 32
-R62
+R70
 !i10b 1
-R63
-R64
-R65
+R71
+R72
+R73
 !i113 1
 R12
 R13
 Egray_to_bin
-Z66 w1773076808
+Z74 w1773162835
 R1
 R2
 R3
-!i122 326
+!i122 816
 R4
-Z67 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gray_To_Bin.vhd
-Z68 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gray_To_Bin.vhd
+Z75 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gray_To_Bin.vhd
+Z76 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gray_To_Bin.vhd
 l0
 L8 1
-V9<AkI_1lQaIZo>NcKlohY2
-!s100 7ZRgbYmQo:TXmk]0K=Rm72
+V0nz4h6@abA[7I8_5EN2E=3
+!s100 Lj1:S<17_>WEbBY74`@Um0
 R7
 32
-R17
+R19
 !i10b 1
-R18
-Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gray_To_Bin.vhd|
-Z70 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gray_To_Bin.vhd|
+Z77 !s108 1773257243.000000
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gray_To_Bin.vhd|
+Z79 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gray_To_Bin.vhd|
 !i113 1
 R12
 R13
@@ -482,41 +482,41 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 11 gray_to_bin 0 22 9<AkI_1lQaIZo>NcKlohY2
-!i122 326
+DEx4 work 11 gray_to_bin 0 22 0nz4h6@abA[7I8_5EN2E=3
+!i122 816
 l18
-L15 13
-VAB?oI1aj_9jl0VUF4OTn_3
-!s100 SCl4eUXaJXzMRYcR_dzGo1
+L15 17
+VS>2kI3A:];>EMN`BjmZ8l1
+!s100 dU7<]c]Cgn@NV5l2NPQ_m1
 R7
 32
-R17
+R19
 !i10b 1
-R18
-R69
-R70
+R77
+R78
+R79
 !i113 1
 R12
 R13
 Ereg
-Z71 w1771437650
+Z80 w1771437650
 R2
 R3
 !i122 114
 R4
-Z72 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd
-Z73 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd
+Z81 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd
+Z82 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd
 l0
 L4 1
 V]jh]zEP6G`]L>@lGV]lc<1
 !s100 8WUA[037HRCF6IEGBAoeW3
 R7
 32
-Z74 !s110 1771499212
+Z83 !s110 1771499212
 !i10b 1
-Z75 !s108 1771499212.000000
-Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd|
-Z77 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd|
+Z84 !s108 1771499212.000000
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd|
+Z86 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/REG.vhd|
 !i113 1
 R12
 R13
@@ -531,34 +531,34 @@ VbTOgfk_CVSL<>FVRN;Iff2
 !s100 UOR^_mk^N^:h92MnOEdYK0
 R7
 32
-R74
+R83
 !i10b 1
-R75
-R76
-R77
+R84
+R85
+R86
 !i113 1
 R12
 R13
 Esync
-Z78 w1772809296
+Z87 w1772809296
 R1
 R2
 R3
 !i122 289
 R4
-Z79 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync.vhd
-Z80 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync.vhd
+Z88 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync.vhd
+Z89 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync.vhd
 l0
 L5 1
 VE>R]z2lSR9Zi5VojAkCgK2
 !s100 `WC]>ULH6]R_RdW:LdcP=0
 R7
 32
-Z81 !s110 1773085151
+Z90 !s110 1773085151
 !i10b 1
-Z82 !s108 1773085151.000000
-Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync.vhd|
-Z84 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync.vhd|
+Z91 !s108 1773085151.000000
+Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync.vhd|
+Z93 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync.vhd|
 !i113 1
 R12
 R13
@@ -574,34 +574,34 @@ VR3mC^4J::M1mCF1C?Rb=51
 !s100 YZXAd`9Ez>1Ifofo?NjO;0
 R7
 32
-R81
+R90
 !i10b 1
-R82
-R83
-R84
+R91
+R92
+R93
 !i113 1
 R12
 R13
 Esync_r
-Z85 w1773087345
+Z94 w1773163008
 R1
 R2
 R3
-!i122 330
+!i122 820
 R4
-Z86 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Sync_R.vhd
-Z87 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Sync_R.vhd
+Z95 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync_R.vhd
+Z96 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync_R.vhd
 l0
 L12 1
-VAPP?P:>A=Cjn2GFDBnQ[=1
-!s100 f6J<[LcSo=K[GEgoUJla@0
+VMQl1Vfio2J7U27`g;_Dh91
+!s100 =c1FCYVNOQn>NgE:1ZlJB1
 R7
 32
-R62
+Z97 !s110 1773257245
 !i10b 1
-R63
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Sync_R.vhd|
-Z89 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Sync_R.vhd|
+R64
+Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync_R.vhd|
+Z99 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync_R.vhd|
 !i113 1
 R12
 R13
@@ -609,42 +609,42 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 6 sync_r 0 22 APP?P:>A=Cjn2GFDBnQ[=1
-!i122 330
+DEx4 work 6 sync_r 0 22 MQl1Vfio2J7U27`g;_Dh91
+!i122 820
 l48
 L21 57
-VgJM;7PWP?XO2^kT2doIf60
-!s100 Uc_k2BmWd5bYGO@jbbMGY3
+VMVMjDhU25lT=Sh`bB1=U11
+!s100 XSNhQ64H2_Zn<WY_@XND[3
 R7
 32
-R62
+R97
 !i10b 1
-R63
-R88
-R89
+R64
+R98
+R99
 !i113 1
 R12
 R13
 Esync_w
-Z90 w1773087126
+Z100 w1773163681
 R1
 R2
 R3
-!i122 329
+!i122 819
 R4
-Z91 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Sync_W.vhd
-Z92 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Sync_W.vhd
+Z101 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync_W.vhd
+Z102 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync_W.vhd
 l0
 L7 1
-VNmUh0>8W@`[7fA1UzMniD3
-!s100 OzddDEM=ofKgg5^78MFP;2
+ViY0L`0S3fV7T_^JfX4j5]1
+!s100 ?G>H7Bzick<k557Y8fdd41
 R7
 32
-R62
+R70
 !i10b 1
-R63
-Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Sync_W.vhd|
-Z94 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Sync_W.vhd|
+R71
+Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync_W.vhd|
+Z104 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Sync_W.vhd|
 !i113 1
 R12
 R13
@@ -652,41 +652,84 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 6 sync_w 0 22 NmUh0>8W@`[7fA1UzMniD3
-!i122 329
+DEx4 work 6 sync_w 0 22 iY0L`0S3fV7T_^JfX4j5]1
+!i122 819
 l43
 L16 58
-VFPZQ3hF[aAZNa:2SGIW^e0
-!s100 ic2h^:V10b_SD?[R@Ec`Z3
+Vk<S0j_;Ndi@LGc<TZOD;61
+!s100 ;YHW]c59>[aZSJ?QW8Co<3
 R7
 32
-R62
+R70
 !i10b 1
-R63
-R93
-R94
+R71
+R103
+R104
+!i113 1
+R12
+R13
+Etb_async_fifo
+Z105 w1773255281
+R1
+R2
+R3
+!i122 825
+R4
+Z106 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_async_fifo.vhd
+Z107 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_async_fifo.vhd
+l0
+L7 1
+V1_ciKSCVnFPn>2=C52j3B3
+!s100 EUM6_jhF?Voo;_EIDeW?@3
+R7
+32
+Z108 !s110 1773257247
+!i10b 1
+Z109 !s108 1773257246.000000
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_async_fifo.vhd|
+Z111 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_async_fifo.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 13 tb_async_fifo 0 22 1_ciKSCVnFPn>2=C52j3B3
+!i122 825
+l43
+L10 98
+V0^fT0bRoNOkgJ3ndfbOk81
+!s100 V_Sl1S_X;Ijez3A3PbE?F0
+R7
+32
+R108
+!i10b 1
+R109
+R110
+R111
 !i113 1
 R12
 R13
 Etb_bin_to_gray
-Z95 w1773075231
+Z112 w1773159951
 R2
 R3
-!i122 325
+!i122 815
 R4
-Z96 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Bin_To_Gray.vhd
-Z97 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Bin_To_Gray.vhd
+Z113 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Bin_To_Gray.vhd
+Z114 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Bin_To_Gray.vhd
 l0
 L5 1
 V2khJ42V=o[TVDPR?@2c7N0
 !s100 QJI`gYld@N5j=8S@]k1NI1
 R7
 32
-R17
+R19
 !i10b 1
-R18
-Z98 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Bin_To_Gray.vhd|
-Z99 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Bin_To_Gray.vhd|
+R77
+Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Bin_To_Gray.vhd|
+Z116 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Bin_To_Gray.vhd|
 !i113 1
 R12
 R13
@@ -694,40 +737,144 @@ Abehavior
 R2
 R3
 DEx4 work 14 tb_bin_to_gray 0 22 2khJ42V=o[TVDPR?@2c7N0
-!i122 325
+!i122 815
 l22
-L8 45
-VI<?@z11en@R9OFV06QmKf0
-!s100 ZRIAY;D9<D:m6T6>hK@P00
+L8 61
+ViM^AWkQF4K:E8>lP:n]?Y3
+!s100 4gY=PcnW7IVon4SK@CXQ:3
 R7
 32
-R17
+R19
 !i10b 1
-R18
-R98
-R99
+R77
+R115
+R116
+!i113 1
+R12
+R13
+Etb_dual_port_memory
+w1773244843
+R2
+R3
+!i122 767
+R4
+8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_Dual_Port_Memory.vhd
+FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_Dual_Port_Memory.vhd
+l0
+L4 1
+Vmhlb^S]J8473QI26cjU2E0
+!s100 6jbX5YSP]L:H`gNR6dgzH0
+R7
+32
+!s110 1773255938
+!i10b 1
+!s108 1773255938.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_Dual_Port_Memory.vhd|
+!s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_Dual_Port_Memory.vhd|
+!i113 1
+R12
+R13
+Etb_fifo_read_control
+Z117 w1773228036
+R2
+R3
+!i122 824
+R4
+Z118 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_FIFO_Read_Control.vhd
+Z119 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_FIFO_Read_Control.vhd
+l0
+L7 1
+VK5eAIB[VBc4]NF[EKS5Hh3
+!s100 9XU19lZFb_M6PRXQkadEh1
+R7
+32
+R63
+!i10b 1
+R109
+Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_FIFO_Read_Control.vhd|
+Z121 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_FIFO_Read_Control.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 20 tb_fifo_read_control 0 22 K5eAIB[VBc4]NF[EKS5Hh3
+!i122 824
+l37
+L10 64
+V^<YRzgSBAzalkWgJGiGMN3
+!s100 h:H?I3QoALZm8WP9F@LYe2
+R7
+32
+R63
+!i10b 1
+R109
+R120
+R121
+!i113 1
+R12
+R13
+Etb_fifo_write_control
+Z122 w1773182721
+R2
+R3
+!i122 823
+R4
+Z123 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_FIFO_Write_Control.vhd
+Z124 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_FIFO_Write_Control.vhd
+l0
+L4 1
+VRhJYLi>434gQLeDHDIR?g1
+!s100 YE5HVdQU0L4h8LoZ<M2Gg2
+R7
+32
+R63
+!i10b 1
+R109
+Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_FIFO_Write_Control.vhd|
+Z126 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_FIFO_Write_Control.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 21 tb_fifo_write_control 0 22 RhJYLi>434gQLeDHDIR?g1
+!i122 823
+l34
+L7 64
+VGz;_kVOG?<WX7VJMRD@>h1
+!s100 dWgSzkE9gOK_N5djH0=OZ2
+R7
+32
+R63
+!i10b 1
+R109
+R125
+R126
 !i113 1
 R12
 R13
 Etb_gray_to_bin
-Z100 w1773076773
+Z127 w1773162638
 R2
 R3
-!i122 327
+!i122 817
 R4
-Z101 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Gray_To_Bin.vhd
-Z102 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Gray_To_Bin.vhd
+Z128 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Gray_To_Bin.vhd
+Z129 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Gray_To_Bin.vhd
 l0
 L7 1
 V0:4XWZE38`aW:[N6j<]2?0
 !s100 l53TaNFQFY4k:eVA[F4n;3
 R7
 32
-R62
+R70
 !i10b 1
-R18
-Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Gray_To_Bin.vhd|
-Z104 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Gray_To_Bin.vhd|
+R77
+Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Gray_To_Bin.vhd|
+Z131 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Gray_To_Bin.vhd|
 !i113 1
 R12
 R13
@@ -735,81 +882,81 @@ Abehavior
 R2
 R3
 DEx4 work 14 tb_gray_to_bin 0 22 0:4XWZE38`aW:[N6j<]2?0
-!i122 327
+!i122 817
 l24
-L10 45
-VQYKF:NCZWTFJIMI0[MM6_1
-!s100 EmPW5`7Mk>VmV3KV?QVd;1
+L10 61
+VEc@cGoXZ>=hf<JSI5GZ@90
+!s100 U8VcXClhO7=Oc<I^7I61<2
 R7
 32
-R62
+R70
 !i10b 1
-R18
-R103
-R104
+R77
+R130
+R131
 !i113 1
 R12
 R13
 Etb_sync_r
-Z105 w1773089518
+Z132 w1773163244
 R2
 R3
-!i122 331
+!i122 821
 R4
-Z106 8C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_Sync_R.vhd
-Z107 FC:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_Sync_R.vhd
+Z133 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Sync_R.vhd
+Z134 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Sync_R.vhd
 l0
 L8 1
 VQCAUH=`><n[8J89dhF@UZ3
 !s100 iU15Xm@mDG8;=I2_SfB9S0
 R7
 32
-R62
+R97
 !i10b 1
-R63
-Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_Sync_R.vhd|
-Z109 !s107 C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\tb_Sync_R.vhd|
+R64
+Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Sync_R.vhd|
+Z136 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/tb_Sync_R.vhd|
 !i113 1
 R12
 R13
 Abehavior
 R2
 R3
-Z110 DEx4 work 9 tb_sync_r 0 22 QCAUH=`><n[8J89dhF@UZ3
-!i122 331
-l36
-Z111 L11 75
-Z112 VZ6gSAD^I@zzXLU>TA;mkT3
-Z113 !s100 a0=Ci=MHUdcmYUZ?1e?Hm2
+DEx4 work 9 tb_sync_r 0 22 QCAUH=`><n[8J89dhF@UZ3
+!i122 821
+l34
+L11 70
+VETd:GmR232Cc:K4Hm[KZz3
+!s100 @e4m>GaH8D>hC5UDKn1<]3
 R7
 32
-R62
+R97
 !i10b 1
-R63
-R108
-R109
+R64
+R135
+R136
 !i113 1
 R12
 R13
 Etest123
-Z114 w1771414778
+Z137 w1771414778
 R2
 R3
 !i122 1
 R4
-Z115 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd
-Z116 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd
+Z138 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd
+Z139 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd
 l0
 L5 1
 V_C=:Q:HGW^1`D4CcQ]JWn3
 !s100 @JOL40NYdV:b>f[bLkXQ@1
 R7
 32
-Z117 !s110 1771415118
+Z140 !s110 1771415118
 !i10b 1
-Z118 !s108 1771415118.000000
-Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd|
-Z120 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd|
+Z141 !s108 1771415118.000000
+Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd|
+Z143 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123.vhd|
 !i113 1
 R12
 R13
@@ -824,33 +971,33 @@ VUT_J0LbDi`?;EVolJ`oiH1
 !s100 Oz:Vb=Oz6M0SGYZ0LCWO01
 R7
 32
-R117
+R140
 !i10b 1
-R118
-R119
-R120
+R141
+R142
+R143
 !i113 1
 R12
 R13
 Etest123_tb
-Z121 w1771415114
+Z144 w1771415114
 R2
 R3
 !i122 2
 R4
-Z122 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd
-Z123 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd
+Z145 8C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd
+Z146 FC:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd
 l0
 L6 1
 V_;VfCVXiZif[TTVf2U><F1
 !s100 S=_B<n@>Y;mM^X7I55F1`3
 R7
 32
-R117
+R140
 !i10b 1
-R118
-Z124 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd|
-Z125 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd|
+R141
+Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd|
+Z148 !s107 C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Test123_tb.vhd|
 !i113 1
 R12
 R13
@@ -865,11 +1012,11 @@ VAacSAMB2?2^knKX`foR?d1
 !s100 N:>JR0gznj65z7LK<LM?O1
 R7
 32
-R117
+R140
 !i10b 1
-R118
-R124
-R125
+R141
+R147
+R148
 !i113 1
 R12
 R13

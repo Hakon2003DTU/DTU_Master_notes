@@ -1,0 +1,124 @@
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_async_fifo is
+end tb_async_fifo;
+
+architecture behavior of tb_async_fifo is
+  component async_fifo
+    port (
+        Reset          : in std_logic;
+        Wclk           : in std_logic;
+        Rclk           : in std_logic;
+        Write_enable   : in std_logic;
+        Read_enable    : in std_logic;
+        Write_data_in  : in std_logic_vector(7 downto 0);
+        Full           : out std_logic;
+        Empty          : out std_logic;
+        Fifo_occu_in   : out std_logic_vector(4 downto 0);
+        Fifo_occu_out  : out std_logic_vector(4 downto 0);
+        Read_data_out  : out std_logic_vector(7 downto 0)
+    );
+  end component;
+
+    signal Reset          : std_logic := '0';
+    signal Wclk           : std_logic := '0';
+    signal Rclk           : std_logic := '0';
+    signal Write_enable   : std_logic := '0';
+    signal Read_enable    : std_logic := '0';
+    signal Write_data_in  : std_logic_vector(7 downto 0) := (others => '0');
+    signal Full           : std_logic;
+    signal Empty          : std_logic;
+    signal Fifo_occu_in   : std_logic_vector(4 downto 0);
+    signal Fifo_occu_out  : std_logic_vector(4 downto 0);
+    signal Read_data_out  : std_logic_vector(7 downto 0);
+
+    -- Clock periods
+    constant Wclk_period : time := 2 ns; -- Faster Write Clock
+    constant Rclk_period : time := 5 ns; -- Slower Read Clock
+
+begin
+  Comp1 : async_fifo 
+    port map (
+        Reset         => Reset,
+        Wclk          => Wclk,
+        Rclk          => Rclk,
+        Write_enable  => Write_enable,
+        Read_enable   => Read_enable,
+        Write_data_in => Write_data_in,
+        Full          => Full,
+        Empty         => Empty,
+        Fifo_occu_in  => Fifo_occu_in,
+        Fifo_occu_out => Fifo_occu_out,
+        Read_data_out => Read_data_out
+    );
+
+  RClk_Generator : process
+  begin
+    Rclk <= '0';
+    wait for Rclk_period / 2;
+    Rclk <= '1';
+    wait for Rclk_period / 2;
+  end process;
+
+  WClk_Generator : process
+  begin
+    Wclk <= '0';
+    wait for Wclk_period / 2;
+    Wclk <= '1';
+    wait for Wclk_period / 2;
+  end process;
+
+
+  Data_Sim : process
+  begin
+	-- 1. System Reset
+        Reset <= '1';
+        Write_enable <= '0';
+        Read_enable  <= '0';
+        wait for 10 ns;
+        Reset <= '0';
+        wait for 5 ns;
+
+        -- 2. Write Data into FIFO (Burst of 5)
+        wait until falling_edge(Wclk);
+        for i in 0 to 15 loop
+            Write_enable  <= '1';
+            Write_data_in <= std_logic_vector(to_unsigned(i, 8));
+            wait for Wclk_period;
+        end loop;
+        Write_enable <= '0';
+
+        wait for 20 ns;
+
+        -- 3. Read Data from FIFO
+        wait until falling_edge(Rclk);
+        for i in 0 to 15 loop
+            Read_enable <= '1';
+            wait for Rclk_period;
+        end loop;
+        Read_enable <= '0';
+
+    wait;
+  end process;
+end behavior;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

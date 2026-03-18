@@ -4,49 +4,60 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity FIFO_Read_Control is
     port (
-		reset : in std_logic;
-		rclk : in std_logic;
-		read_enable : in std_logic;
-		W_sync : in std_logic_vector(3 downto 0);
-		empty : out std_logic;
-		ren : out std_logic;
-		fifo_occu_out : out std_logic_vector(4 downto 0);
-		raddr: out std_logic_vector(4 downto 0);
-		rptr: out std_logic_vector(4 downto 0)
+        Reset         : in std_logic;
+        Rclk          : in std_logic;
+        Read_enable   : in std_logic;
+        W_sync        : in std_logic_vector(4 downto 0);
+        Empty         : out std_logic;
+        Ren           : out std_logic;
+        Fifo_occu_out : out std_logic_vector(4 downto 0);
+        Raddr         : out std_logic_vector(3 downto 0);
+        Rptr          : out std_logic_vector(4 downto 0)
     );
-end FIFO_Read_Control;--finished
+end FIFO_Read_Control;
 
 architecture behavioral of FIFO_Read_Control is
-
-    -- Signals would be declared here
-
-	signal Readpointer: std_logic_vector(4 downto 0); 
-
-
+    signal Memory_Empty : std_logic := '0';
+    signal Readpointer: std_logic_vector(4 downto 0) := "00000";
 
 begin
 
 
+   process(W_Sync,Readpointer)
+   Begin
+	    if (Readpointer = W_sync) then
+                Memory_Empty <= '1';
+            else
+                Memory_Empty <= '0';
+            end if;
+    end process;
 
 
-process(rclk,reset)
-	begin
-		if (reset = '1') then
-		
-		elsif rising_edge(rclk) then
 
+    process(rclk, reset)
+    begin
+        if (Reset = '1') then
+            Empty         <= '0';
+            Ren           <= '0';
+            Fifo_occu_out <= (others => '0');
+            Raddr         <= (others => '0');
+            Rptr          <= (others => '0');
+	    Readpointer   <= (others => '0');
+        elsif rising_edge(rclk) then
+            
+	    if ((Read_enable ='1') and (Memory_Empty = '0')) then
+                Readpointer <= std_logic_vector(unsigned(Readpointer) + 1);
+                Ren          <= '1';
+            else
+                Ren          <= '0';
+            end if; 		
 
-		
-			-- Defining when the the system is empty  
-			if (wptr == W_sync) then 
-				empty <= '1'; 
-			else 
-				empty <='0';
-			end if;
-		end if;
-		fifo_occu_out <= W_sync - Readpointer;
-		rptr <= Readpointer;
-	end process
+	    Empty        <= Memory_Empty;
+            Fifo_occu_out <= std_logic_vector(unsigned(Readpointer) - unsigned(W_sync));
+            Rptr         <= Readpointer;
+            Raddr        <= Readpointer(3 downto 0);
 
+         end if;
+    end process; 
 
 end behavioral;

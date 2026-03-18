@@ -11,37 +11,37 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Sync_R is
 port (
-ptr  : in std_logic_vector(3 downto 0);
+ptr  : in std_logic_vector(4 downto 0);
 Wclk : in std_logic;
 Rclk : in std_logic;
-sync : out std_logic_vector(3 downto 0)
+sync : out std_logic_vector(4 downto 0)
 );
 end Sync_R;
 
 architecture behavioral of Sync_R is
  -- Insert signals 
 
-Signal line_1 :std_logic_vector(3 downto 0);
-Signal line_2 :std_logic_vector(3 downto 0);
-Signal line_3 :std_logic_vector(3 downto 0);
-Signal line_4 :std_logic_vector(3 downto 0);
+Signal line_1 :std_logic_vector(4 downto 0);
+Signal line_2 :std_logic_vector(4 downto 0);
+Signal line_3 :std_logic_vector(4 downto 0);
+Signal line_4 :std_logic_vector(4 downto 0);
 
 component Bin_To_Gray port (
-    B : in std_logic_vector(3 downto 0);
-    G : out std_logic_vector(3 downto 0)
+    B : in std_logic_vector(4 downto 0);
+    G : out std_logic_vector(4 downto 0)
 );
 end component;
 
 component Flip_flop port (
-    Input : in std_logic_vector(3 downto 0);
+    Input : in std_logic_vector(4 downto 0);
     clk : in std_logic;
-    Output : out std_logic_vector(3 downto 0)
+    Output : out std_logic_vector(4 downto 0)
 );
 end component;
 
 component Gray_To_Bin port (
-    G : in std_logic_vector(3 downto 0);
-    B : out std_logic_vector(3 downto 0)
+    G : in std_logic_vector(4 downto 0);
+    B : out std_logic_vector(4 downto 0)
 );
 end component;
 
