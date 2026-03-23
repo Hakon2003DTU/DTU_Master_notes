@@ -23,3 +23,8 @@
 # Compile of MAC_Learning.vhd was successful.
 # Compile of Scheduler.vhd was successful.
 # 4 compiles, 0 failed with no errors.
+# Compile of Cross_bar.vhd was successful.
+# Compile of MAC_Learning.vhd was successful.
+# Compile of Scheduler.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of FCS.vhd was successful.

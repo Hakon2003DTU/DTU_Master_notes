@@ -1,5 +1,13 @@
 
 
+---------------------------------------------------------------------
+-- Componant:   Top_Layer 
+-- Description: This is the toplayer where all the sub-componants   
+-- 		 are cornected.
+-- Changes	:
+--  		HH 18/3 creation of document and I/O
+---------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
