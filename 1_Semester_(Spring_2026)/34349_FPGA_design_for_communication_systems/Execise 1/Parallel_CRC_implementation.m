@@ -1,4 +1,11 @@
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 8-bit parallel CRC-32 calculator
+% 
+% Description: This script is used to calalute the setup of the registors 
+%                so that a 8 bit parrallel CRC-32 can be preformed
+%
+% Made by: Hákon Hlynsson
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Parallel CRC implementation
 % Polynomial

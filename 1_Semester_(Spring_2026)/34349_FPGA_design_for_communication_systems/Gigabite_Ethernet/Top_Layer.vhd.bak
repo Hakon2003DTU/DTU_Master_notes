@@ -1,56 +1,244 @@
-
-
+---------------------------------------------------------------------
+-- Componant:   Top_Layer
+-- Description: This is the top layer where all the sub-componants
+--              are connected.
+-- Changes  :
+--              Hakon 
+---------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use work.MAC_PKG.all;   -- defines t_flag_array, t_mac_array, t_port_array
 
 entity Top_Layer is
     port (
-	--Input
-        Reset          	: in std_logic;
-        Rx_Data1        : in std_logic_vector(7 downto 0);
-        Rx_Clk1         : in std_logic;
-        Rx_Valid1   	: in std_logic;
-	Rx_Data2        : in std_logic_vector(7 downto 0);
-        Rx_Clk2        	: in std_logic;
-        Rx_Valid2   	: in std_logic;
-	Rx_Data3        : in std_logic_vector(7 downto 0);
-        Rx_Clk3       	: in std_logic;
-        Rx_Valid3   	: in std_logic;
-	Rx_Data4        : in std_logic_vector(7 downto 0);
-        Rx_Clk4        	: in std_logic;
-        Rx_Valid4   	: in std_logic;
-	
-	--Output
-	Tx_Clk        	: out std_logic;
-	Tx_Data1        : out std_logic_vector(7 downto 0);
-        Tx_Valid1   	: out std_logic;
-	Tx_Data2        : out std_logic_vector(7 downto 0);
-        Tx_Valid2   	: out std_logic;
-	Tx_Data3        : out std_logic_vector(7 downto 0);
-        Tx_Valid3   	: out std_logic;
-	Tx_Data4        : out std_logic_vector(7 downto 0);
-        Tx_Valid4   	: out std_logic
+        --Input
+        Reset          : in std_logic;
+        Rx_Data_1      : in std_logic_vector(7 downto 0);
+        Rx_Clk_1       : in std_logic;
+        Rx_Valid_1     : in std_logic;
+        Rx_Data_2      : in std_logic_vector(7 downto 0);
+        Rx_Clk_2       : in std_logic;
+        Rx_Valid_2     : in std_logic;
+        Rx_Data_3      : in std_logic_vector(7 downto 0);
+        Rx_Clk_3       : in std_logic;
+        Rx_Valid_3     : in std_logic;
+        Rx_Data_4      : in std_logic_vector(7 downto 0);
+        Rx_Clk_4       : in std_logic;
+        Rx_Valid_4     : in std_logic;
+        --Output
+        Tx_Clk         : out std_logic;
+        Tx_Data_1      : out std_logic_vector(7 downto 0);
+        Tx_Valid_1     : out std_logic;
+        Tx_Data_2      : out std_logic_vector(7 downto 0);
+        Tx_Valid_2     : out std_logic;
+        Tx_Data_3      : out std_logic_vector(7 downto 0);
+        Tx_Valid_3     : out std_logic;
+        Tx_Data_4      : out std_logic_vector(7 downto 0);
+        Tx_Valid_4     : out std_logic
     );
 end Top_Layer;
 
 architecture behavioral of Top_Layer is
+
 -- Signal & Component Declaration
+
+component FCS port (
+    Reset        : in  std_logic;
+    Tx_Clk       : in  std_logic;
+    Rx_Clk       : in  std_logic;
+    Rx_Valid     : in  std_logic;
+    RX_Data      : in  std_logic_vector(7 downto 0);
+    En_Port_in   : in  std_logic;                       
+    Dst_Port_in  : in  std_logic_vector(2 downto 0);   
+    En_Data_out  : out std_logic;                      
+    Dst_Port_out : out std_logic_vector(2 downto 0); 
+    Data_out     : out std_logic_vector(7 downto 0);   
+    En_Mac       : out std_logic;                      
+    Dst_Mac      : out std_logic_vector(47 downto 0);
+    Src_Mac      : out std_logic_vector(47 downto 0) 
+);
+end component;
+
+component MAC_TOP port (
+    clk           : in  std_logic;
+    reset         : in  std_logic;
+    port0_EN      : in  std_logic;
+    port0_dstMac  : in  std_logic_vector(47 downto 0);
+    port0_srcMac  : in  std_logic_vector(47 downto 0);
+    port0_dstPort : out std_logic_vector(2 downto 0);
+    port0_done    : out std_logic;
+    port1_EN      : in  std_logic;
+    port1_dstMac  : in  std_logic_vector(47 downto 0);
+    port1_srcMac  : in  std_logic_vector(47 downto 0);
+    port1_dstPort : out std_logic_vector(2 downto 0);
+    port1_done    : out std_logic;
+    port2_EN      : in  std_logic;
+    port2_dstMac  : in  std_logic_vector(47 downto 0);
+    port2_srcMac  : in  std_logic_vector(47 downto 0);
+    port2_dstPort : out std_logic_vector(2 downto 0);
+    port2_done    : out std_logic;
+    port3_EN      : in  std_logic;
+    port3_dstMac  : in  std_logic_vector(47 downto 0);
+    port3_srcMac  : in  std_logic_vector(47 downto 0);
+    port3_dstPort : out std_logic_vector(2 downto 0);
+    port3_done    : out std_logic
+);
+end component;
+
+component Top_crossbar port (
+	--input
+    Reset      : in  std_logic;
+    Tx_Clk     : in  std_logic;
+    Data_in_1  : in  std_logic_vector(7 downto 0);
+    Data_in_2  : in  std_logic_vector(7 downto 0);
+    Data_in_3  : in  std_logic_vector(7 downto 0);
+    Data_in_4  : in  std_logic_vector(7 downto 0);
+    Dst_Port_1 : in  std_logic_vector(2 downto 0);
+    Dst_Port_2 : in  std_logic_vector(2 downto 0);
+    Dst_Port_3 : in  std_logic_vector(2 downto 0);
+    Dst_Port_4 : in  std_logic_vector(2 downto 0);
+    En_Data_1  : in  std_logic;
+    En_Data_2  : in  std_logic;
+    En_Data_3  : in  std_logic;
+    En_Data_4  : in  std_logic;
+	-- output
+    Tx_Data_1  : out std_logic_vector(7 downto 0);
+    Tx_Data_2  : out std_logic_vector(7 downto 0);
+    Tx_Data_3  : out std_logic_vector(7 downto 0);
+    Tx_Data_4  : out std_logic_vector(7 downto 0);
+    Tx_Valid_1 : out std_logic;
+    Tx_Valid_2 : out std_logic;
+    Tx_Valid_3 : out std_logic;
+    Tx_Valid_4 : out std_logic
+);
+end component;
+
+Signal TxClk_Int      : std_logic;
+
+Signal En_Port_in_1, En_Port_in_2, En_Port_in_3, En_Port_in_4     : std_logic;
+Signal Dst_Port_in_1, Dst_Port_in_2,Dst_Port_in_3, Dst_Port_in_4  : std_logic_vector(2 downto 0);
+Signal En_Data_out_1, En_Data_out_2, En_Data_out_3, En_Data_out_4 : std_logic;
+Signal Dst_Port_out_1, Dst_Port_out_2,Dst_Port_out_3, Dst_Port_out_4 : std_logic_vector(2 downto 0);
+Signal Data_out_1, Data_out_2, Data_out_3, Data_out_4             : std_logic_vector(7 downto 0);
+Signal En_Mac_1, En_Mac_2, En_Mac_3, En_Mac_4                     : std_logic;
+Signal Dst_Mac_1, Dst_Mac_2, Dst_Mac_3, Dst_Mac_4                 : std_logic_vector(47 downto 0);
+Signal Src_Mac_1, Src_Mac_2, Src_Mac_3, Src_Mac_4                 : std_logic_vector(47 downto 0);
 
 Begin
 
+FCS1: FCS port map(
+    Reset=>Reset, 
+	Tx_Clk=>TxClk_Int, 
+	Rx_Clk=>Rx_Clk_1,
+    Rx_Valid=>Rx_Valid_1, 
+	RX_Data=>Rx_Data_1,
+    En_Port_in=>En_Port_in_1, 
+	Dst_Port_in=>Dst_Port_in_1,
+    En_Data_out=>En_Data_out_1, 
+	Dst_Port_out=>Dst_Port_out_1,
+    Data_out=>Data_out_1, 
+	En_Mac=>En_Mac_1,
+    Dst_Mac=>Dst_Mac_1, 
+	Src_Mac=>Src_Mac_1
+);
 
+FCS2: FCS port map(
+    Reset=>Reset, 
+	Tx_Clk=>TxClk_Int, 
+	Rx_Clk=>Rx_Clk_2,
+    Rx_Valid=>Rx_Valid_2, 
+	RX_Data=>Rx_Data_2,
+    En_Port_in=>En_Port_in_2, 
+	Dst_Port_in=>Dst_Port_in_2,
+    En_Data_out=>En_Data_out_2, 
+	Dst_Port_out=>Dst_Port_out_2,
+    Data_out=>Data_out_2, 
+	En_Mac=>En_Mac_2,
+    Dst_Mac=>Dst_Mac_2, 
+	Src_Mac=>Src_Mac_2
+);
 
+FCS3: FCS port map(
+    Reset=>Reset, 
+	Tx_Clk=>TxClk_Int, 
+	Rx_Clk=>Rx_Clk_3,
+    Rx_Valid=>Rx_Valid_3, 
+	RX_Data=>Rx_Data_3,
+    En_Port_in=>En_Port_in_3, 
+	Dst_Port_in=>Dst_Port_in_3,
+    En_Data_out=>En_Data_out_3, 
+	Dst_Port_out=>Dst_Port_out_3,
+    Data_out=>Data_out_3, 
+	En_Mac=>En_Mac_3,
+    Dst_Mac=>Dst_Mac_3, 
+	Src_Mac=>Src_Mac_3
+);
 
+FCS4: FCS port map(
+    Reset=>Reset, 
+	Tx_Clk=>TxClk_Int, 
+	Rx_Clk=>Rx_Clk_4,
+    Rx_Valid=>Rx_Valid_4, 
+	RX_Data=>Rx_Data_4,
+    En_Port_in=>En_Port_in_4, 
+	Dst_Port_in=>Dst_Port_in_4,
+    En_Data_out=>En_Data_out_4, 
+	Dst_Port_out=>Dst_Port_out_4,
+    Data_out=>Data_out_4,
+ 	En_Mac=>En_Mac_4,
+    Dst_Mac=>Dst_Mac_4,
+ 	Src_Mac=>Src_Mac_4
+);
 
+Top_MAC: MAC_TOP port map(
+    clk           => TxClk_Int,
+    reset         => Reset,
+    port0_EN      => En_Mac_1,
+    port0_dstMac  => Dst_Mac_1,
+    port0_srcMac  => Src_Mac_1,
+    port0_dstPort => Dst_Port_in_1,
+    port0_done    => En_Port_in_1,
+    port1_EN      => En_Mac_2,
+    port1_dstMac  => Dst_Mac_2,
+    port1_srcMac  => Src_Mac_2,
+    port1_dstPort => Dst_Port_in_2,
+    port1_done    => En_Port_in_2,
+    port2_EN      => En_Mac_3,
+    port2_dstMac  => Dst_Mac_3,
+    port2_srcMac  => Src_Mac_3,
+    port2_dstPort => Dst_Port_in_3,
+    port2_done    => En_Port_in_3,
+    port3_EN      => En_Mac_4,
+    port3_dstMac  => Dst_Mac_4,
+    port3_srcMac  => Src_Mac_4,
+    port3_dstPort => Dst_Port_in_4,
+    port3_done    => En_Port_in_4
+);
 
-
-
+Crossbar_Top: Top_crossbar port map(
+    Reset      => Reset,
+    Tx_Clk     => TxClk_Int,
+    Data_in_1  => Data_out_1,
+    Data_in_2  => Data_out_2,
+    Data_in_3  => Data_out_3,
+    Data_in_4  => Data_out_4,
+    Dst_Port_1 => Dst_Port_out_1,
+    Dst_Port_2 => Dst_Port_out_2,
+    Dst_Port_3 => Dst_Port_out_3,
+    Dst_Port_4 => Dst_Port_out_4,
+    En_Data_1  => En_Data_out_1,
+    En_Data_2  => En_Data_out_2,
+    En_Data_3  => En_Data_out_3,
+    En_Data_4  => En_Data_out_4,
+    Tx_Data_1  => Tx_Data_1,
+    Tx_Data_2  => Tx_Data_2,
+    Tx_Data_3  => Tx_Data_3,
+    Tx_Data_4  => Tx_Data_4,
+    Tx_Valid_1 => Tx_Valid_1,
+    Tx_Valid_2 => Tx_Valid_2,
+    Tx_Valid_3 => Tx_Valid_3,
+    Tx_Valid_4 => Tx_Valid_4
+);
 
 end behavioral;
-
-
-
-
-
-

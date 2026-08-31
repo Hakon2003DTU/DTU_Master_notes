@@ -1,15 +1,39 @@
-
-
-
-
 ---------------------------------------------------------------------
--- Componant:   Scheduler 
--- Description: its task is to control the crossbar so there is an ideel 
---	     	throghput so that the VOQ gets emptied the fastest	   
--- Changes	:
---  		HH 18/3 creation of document and I/O
+-- Componant  : Scheduler
+-- Description: 4-port per-frame round-robin scheduler for the
+--              gigabit switch. Runs on Tx_Clk. Each cycle it looks
+--              at the 4 x 4 Ready matrix coming from
+--              FIFO_And_Crossbar and decides which input row drives
+--              each output column.
+--
+--              Output protocol:
+--                  Select_S((j*2)+1 downto j*2)
+--                      = 2-bit input index for column j
+--                  Tx_Valid(j) = '1' while output j is matched AND
+--                                its source FIFO has data this cycle
+--
+--              Tx_Valid is gated by the live Ready bit of the
+--              currently matched (input, output) pair so the
+--              moment a FIFO empties the output deasserts in the
+--              same cycle - no spurious trailing byte goes out.
+--
+--              Granularity: per frame. Once an output is matched
+--              to an input, the match holds until that VOQ stops
+--              advertising data (Ready bit drops). The scheduler
+--              then advances the round-robin priority pointer for
+--              that output and looks for a new match.
+--
+--              Conflict resolution: outputs are processed in fixed
+--              index order 0..3. An input that is already claimed
+--              by an active or just-matched higher-priority output
+--              cannot be re-claimed in the same cycle.
+--
+--              Ready encoding (flat 16-bit vector):
+--                  Ready(i*4 + j) = '1' iff input i has data for
+--                  output j (i.e., FIFO(i, j) is non-empty).
+--
+-- Made by    : Hakon Hlynsson
 ---------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -17,31 +41,121 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Scheduler is
     port (
-	--Input
-        Clk           : in std_logic;
-	Dst_MAC	      : in std_logic_vector(47 downto 0);
-        Src_MAC       : in std_logic_vector(47 downto 0);		
-	--Output
-	Select_Signal : out std_logic_vector(47 downto 0)-- unknown size  
-	);
+        Reset    : in  std_logic;
+        Tx_Clk   : in  std_logic;
+        Ready    : in  std_logic_vector(15 downto 0);   -- 4 inputs x 4 outputs
+
+        Select_S : out std_logic_vector(7 downto 0);    -- 4 x 2-bit, for crossbar
+        Tx_Valid : out std_logic_vector(3 downto 0)     -- per-output valid
+    );
 end Scheduler;
 
 architecture behavioral of Scheduler is
--- Signal & Component Declaration
 
+    -- Per-output registered state
+    type src_array_t is array (0 to 3) of unsigned(1 downto 0);
 
-Begin
+    signal active : std_logic_vector(3 downto 0) := (others => '0');
+    signal src    : src_array_t                  := (others => "00");
+    signal ptr    : src_array_t                  := (others => "00");
 
+    -- Helper to read the flat Ready vector with (input i, output j)
+    function ReadyAt(R : std_logic_vector(15 downto 0);
+                     i, j : integer) return std_logic is
+    begin
+        return R(i * 4 + j);
+    end function;
 
+begin
 
+    ---------------------------------------------------------------
+    -- Sequential state update
+    ---------------------------------------------------------------
+    State_Reg : process(Tx_Clk, Reset)
+        variable claimed     : std_logic_vector(3 downto 0);
+        variable next_active : std_logic_vector(3 downto 0);
+        variable next_src    : src_array_t;
+        variable next_ptr    : src_array_t;
+        variable cand        : unsigned(1 downto 0);
+        variable found       : boolean;
+    begin
+        if Reset = '1' then
+            active <= (others => '0');
+            src    <= (others => "00");
+            -- Stagger initial pointers so the first burst spreads
+            -- across inputs instead of dog-piling on input 0
+            ptr(0) <= to_unsigned(0, 2);
+            ptr(1) <= to_unsigned(1, 2);
+            ptr(2) <= to_unsigned(2, 2);
+            ptr(3) <= to_unsigned(3, 2);
 
+        elsif rising_edge(Tx_Clk) then
 
+            next_active := active;
+            next_src    := src;
+            next_ptr    := ptr;
+            claimed     := (others => '0');
 
+            -----------------------------------------------------------
+            -- Phase 1 : maintain or release existing matches
+            -----------------------------------------------------------
+            for j in 0 to 3 loop
+                if active(j) = '1' then
+                    if ReadyAt(Ready, to_integer(src(j)), j) = '1' then
+                        -- frame still streaming - hold the match
+                        claimed(to_integer(src(j))) := '1';
+                    else
+                        -- VOQ ran out: release, bump priority
+                        next_active(j) := '0';
+                        next_ptr(j)    := src(j) + 1;
+                    end if;
+                end if;
+            end loop;
 
+            -----------------------------------------------------------
+            -- Phase 2 : try to match each idle output to a new input
+            -----------------------------------------------------------
+            for j in 0 to 3 loop
+                if next_active(j) = '0' then
+                    found := false;
+                    for offset in 0 to 3 loop
+                        cand := next_ptr(j) + to_unsigned(offset, 2);
+                        if (not found)
+                           and (ReadyAt(Ready, to_integer(cand), j) = '1')
+                           and (claimed(to_integer(cand)) = '0') then
+                            next_active(j)            := '1';
+                            next_src(j)               := cand;
+                            next_ptr(j)               := cand + 1;
+                            claimed(to_integer(cand)) := '1';
+                            found                     := true;
+                        end if;
+                    end loop;
+                end if;
+            end loop;
 
+            -- Commit
+            active <= next_active;
+            src    <= next_src;
+            ptr    <= next_ptr;
+        end if;
+    end process;
+
+    ---------------------------------------------------------------
+    -- Combinational outputs:
+    --
+    --   Tx_Valid(j) = active(j) AND Ready(src(j), j)
+    --   So the moment the matched FIFO drops empty, Tx_Valid goes
+    --   low this same cycle. Phase 1 will then release the match
+    --   on the next clock edge.
+    --
+    --   Select_S is the per-output source index regardless of
+    --   active/empty status (the Crossbar only forwards bytes when
+    --   Tx_Valid is high anyway).
+    ---------------------------------------------------------------
+    Out_Gen : for j in 0 to 3 generate
+        Tx_Valid(j)                  <= active(j)
+                                        and Ready(to_integer(src(j)) * 4 + j);
+        Select_S((j*2)+1 downto j*2) <= std_logic_vector(src(j));
+    end generate;
 
 end behavioral;
-
-
-
-

@@ -9,14 +9,15 @@ architecture behavior of tb_FCS_Reg is
 
   -- componant used in testbench
   component FCS_Reg
-    	port(
+    	port (
+	--Input
 	Reset			: in std_logic;
-    	Rx_Clk        		: in std_logic;
+    	Rx_Clk     		: in std_logic;
 	Rx_Valid		: in std_logic;
 	RX_Data   		: in std_logic_vector(7 downto 0);
-	FCS_Check		: in std_logic;
-	fcs_error		: out std_logic 
-
+	FCS_Check		: in std_logic; -- goes high when ever the next 32 bits are the FCS value
+	--Output
+    	En_Mac          : out std_logic -- goes high if FCS value is correct, and only for one cycle 
 	);
   end component;
 
@@ -26,15 +27,16 @@ architecture behavior of tb_FCS_Reg is
 	Signal test_Rx_Valid	: std_logic;
 	Signal test_RX_Data	: std_logic_vector(7 downto 0);
 	Signal test_FCS_Check	: std_logic;
-	Signal test_fcs_error	: std_logic; 
+	Signal test_En_Mac	: std_logic;
+ 
 
  -- Constants
 	constant Preamble 	: std_logic_vector(55 downto 0) := x"AAAAAAAAAAAAAA";
 	constant Start_of_Frame : std_logic_vector(7 downto 0)  := x"AB";	
-	constant Destination_MAC: std_logic_vector(47 downto 0) := x"000000000000";
-	constant Source_MAC	: std_logic_vector(47 downto 0) := x"000000000000";
+	constant Destination_MAC: std_logic_vector(47 downto 0) := x"000000000002";
+	constant Source_MAC	: std_logic_vector(47 downto 0) := x"000000000001";
 	constant Ethernetlength : std_logic_vector(15 downto 0) := x"002E";
-	constant FCS		: std_logic_vector(31 downto 0) := x"67CB11FA";
+	constant FCS		: std_logic_vector(31 downto 0) := x"A3338135";
 
   -- Clock Speed
   constant clk_period_1 : time := 8 ns;
@@ -47,7 +49,7 @@ architecture behavior of tb_FCS_Reg is
 	Rx_Valid	=>test_Rx_Valid,	
 	RX_Data		=>test_RX_Data,	
 	FCS_Check	=>test_FCS_Check,	
-	fcs_error	=>test_fcs_error	
+	En_Mac		=>test_En_Mac	
     );
 
   -- Clock generation 1 
@@ -133,28 +135,4 @@ architecture behavior of tb_FCS_Reg is
   end process;
 
 end;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

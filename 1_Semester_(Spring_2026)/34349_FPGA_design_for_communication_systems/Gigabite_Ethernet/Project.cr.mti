@@ -1,11 +1,62 @@
-C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/Ethernet_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\Ethernet_Reg.vhd}
+C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/Port_Logic.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\Port_Logic.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity Ethernet_Reg
--- Compiling architecture behavioral of Ethernet_Reg
+-- Compiling entity Port_Logic
+-- Compiling architecture behavioral of Port_Logic
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/MAC_PKG.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\MAC_PKG.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package MAC_PKG
+-- Compiling package body MAC_PKG
+-- Loading package MAC_PKG
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/MAC_BRAM.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\MAC_BRAM.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity MAC_BRAM
+-- Compiling architecture SYN of mac_bram
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_FCS_And_MAC.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\tb_FCS_And_MAC.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_FCS_And_MAC
+-- Compiling architecture behavior of tb_FCS_And_MAC
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/MAC_TOP.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\MAC_TOP.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MAC_PKG
+-- Compiling entity MAC_TOP
+-- Compiling architecture Behavioral of MAC_TOP
+-- Loading entity MAC_ARBITER
+-- Loading entity MAC_ENGINE
+-- Loading entity MAC_AGING
+-- Loading package altera_mf_components
+-- Loading entity MAC_BRAM
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/FCS_State_Matchine.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\FCS_State_Matchine.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity FCS_State_Machine
+-- Compiling architecture behavioral of FCS_State_Machine
 
 } {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_Destination_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\tb_Destination_Reg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -31,14 +82,33 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity tb_FCS_Reg
 -- Compiling architecture behavior of tb_FCS_Reg
 
-} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/Scheduler.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\Scheduler.vhd}
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/FCS_And_MAC.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\FCS_And_MAC.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity Scheduler
--- Compiling architecture behavioral of Scheduler
+-- Compiling entity FCS_And_MAC
+-- Compiling architecture behavioral of FCS_And_MAC
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/MAC_AGING.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\MAC_AGING.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MAC_PKG
+-- Compiling entity MAC_AGING
+-- Compiling architecture Behavioral of MAC_AGING
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/crossbar.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\crossbar.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity crossbar
+-- Compiling architecture behavioral of crossbar
 
 } {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/Destination_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\Destination_Reg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -49,6 +119,31 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Destination_Reg
 -- Compiling architecture behavioral of Destination_Reg
 
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/Scheduler.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\Scheduler.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Scheduler
+-- Compiling architecture behavioral of Scheduler
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_Port_Logic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_Port_Logic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_Port_Logic
+-- Compiling architecture behavior of tb_Port_Logic
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_FCS.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\tb_FCS.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_FCS
+-- Compiling architecture behavior of tb_FCS
+
 } {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/FCS_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\FCS_Reg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -58,15 +153,37 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity FCS_Reg
 -- Compiling architecture behavioral of FCS_Reg
 
-} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/Cross_bar.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\Cross_bar.vhd}
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/FCS.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\FCS.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity Cross_Bar
--- Compiling architecture behavioral of Top_Layer
--- Loading entity Top_Layer
+-- Compiling entity FCS
+-- Compiling architecture behavioral of FCS
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/FIFO.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\FIFO.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FIFO
+-- Compiling architecture SYN of FIFO
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_switch_fabric.vhd {0 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\tb_switch_fabric.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+** Error (suppressible): C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\tb_switch_fabric.vhd(2): (vcom-1491) Empty source files.
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/MAC_ENGINE.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\MAC_ENGINE.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MAC_PKG
+-- Compiling entity MAC_ENGINE
+-- Compiling architecture Behavioral of MAC_ENGINE
 
 } {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/Source_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\Source_Reg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
@@ -74,19 +191,33 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity Destination_Reg
--- Compiling architecture behavioral of Destination_Reg
+-- Compiling entity Source_Reg
+-- Compiling architecture behavioral of Source_Reg
 
-} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/MAC_Learning.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\MAC_Learning.vhd}
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/switch_fabric.vhd {0 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\switch_fabric.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity MAC_Learning
--- Compiling architecture behavioral of MAC_Learning
+-- Compiling entity switch_fabric
+-- Compiling architecture behavioral of switch_fabric
+-- Loading entity Scheduler
+** Error: C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\switch_fabric.vhd(68): (vcom-1035) Formal port "rdusedw_grid" has OPEN or no actual associated with it.
+-- Loading entity crossbar
+** Note: C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\switch_fabric.vhd(101): VHDL Compiler exiting
 
-} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_FIFO.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\tb_FIFO.vhd}
+} {10.0 11.0} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/MAC_ARBITER.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\hakon\Documents\DTU\Kandidat\Hakon_master_notes\1_Semester_(Spring_2026)\34349_FPGA_design_for_communication_systems\Gigabite_Ethernet\MAC_ARBITER.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MAC_PKG
+-- Compiling entity MAC_ARBITER
+-- Compiling architecture Behavioral of MAC_ARBITER
+
+} {} {}} C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_FIFO.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/hakon/Documents/DTU/Kandidat/Hakon_master_notes/1_Semester_(Spring_2026)/34349_FPGA_design_for_communication_systems/Gigabite_Ethernet/tb_FIFO.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO

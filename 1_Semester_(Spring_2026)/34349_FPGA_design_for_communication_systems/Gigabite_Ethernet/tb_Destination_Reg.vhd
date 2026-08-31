@@ -14,6 +14,7 @@ architecture behavior of tb_Destination_Reg is
         Rx_Data        	: in std_logic_vector(7 downto 0);
         Rx_Clk         	: in std_logic;
         Dst_En   	: in std_logic;
+	En_out		: in std_logic;
 	--Output
         Dst_MAC        	: out std_logic_vector(47 downto 0)
     );
@@ -22,7 +23,8 @@ architecture behavior of tb_Destination_Reg is
   -- Signals
   signal Test_Rx_Data        : std_logic_vector(7 downto 0) := x"00";
   signal Test_Rx_Clk          : std_logic := '0';
-  signal Test_Dst_En 		: std_logic := '0'; 
+  signal Test_Dst_En 		: std_logic := '0';
+  signal Test_En_Out 		: std_logic := '0';  
   signal Test_Dst_MAC        : std_logic_vector(47 downto 0) := (others => '0');
 
   -- Clock Speed
@@ -34,6 +36,7 @@ architecture behavior of tb_Destination_Reg is
     Rx_Data     => Test_Rx_Data,
     Rx_Clk	=> Test_Rx_Clk,
     Dst_En 	=> Test_Dst_En,
+    En_Out	=> Test_En_Out,
     Dst_MAC   	=> Test_Dst_MAC
     );
 
@@ -51,6 +54,7 @@ architecture behavior of tb_Destination_Reg is
   begin
     	-- Start by inserting data
     	Test_Dst_En <= '0';
+	Test_En_Out <= '0';
    	wait for clk_period*2;
     	Test_Dst_En <= '1';
 	Test_Rx_Data <= X"01";
@@ -66,6 +70,7 @@ architecture behavior of tb_Destination_Reg is
     	Test_Rx_Data <= X"06";
 	wait for clk_period;
 	Test_Dst_En <= '0';
+	Test_En_Out <= '1';
     wait;
   end process;
 
